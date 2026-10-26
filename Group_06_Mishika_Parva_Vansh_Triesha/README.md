@@ -1,95 +1,117 @@
-# IVRAR Group 06: AR Visual-Marker Multi-Storey Indoor Navigation System
-**Course:** Introduction to Virtual Reality & Augmented Reality (IVRAR - Course Code: 702COI002)  
-**Academic Term:** Academic Year 2026–2027 | Semester V  
-**Institution:** SVKM's NMIMS MPSTME, Mumbai  
-
-
-## Authorized Research Title
-> **"How can an AR visual-marker navigation system using ArUco and QR anchors optimize transit time and route-finding errors across multi-storey university buildings for first-year students?"**
-
-**Course Code:** 702COI002 (Immersive Virtual, Real & Augmented Reality - Institute Open Elective)
+# Group 06 — SmartCampus Wayfinding XR
+### Immersive Virtual Reality & Augmented Reality (IVRAR - Course Code: 702TG0C003 / 702COI002)
+**SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering, Mumbai**  
+*Academic Year 2026–2027 (Semester V) · Problem-Based Learning (PBL) Research Cohort*
 
 ---
 
-> [!NOTE]
-> ### The Devil's Advocate: Reality Check & Theoretical Roast
-> *"Developing an AR visual-marker wayfinding app so freshmen don't get lost in MPSTME, because university students who can navigate massive open-world video games with zero tutorials somehow require four ArUco tags and computer vision SLAM to locate Classroom 302."*
+## 👥 Student Engineering Team (Group 06 · Batch B2)
+
+| Student Name | Roll No. | SAP ID | Programme | Studio Role | Assigned Branch |
+| :--- | :---: | :---: | :--- | :--- | :--- |
+| **Mishika Shah** | C136 | 70322200040 | B.Tech Computer Engineering (Integrated) | Spatial Vision & AR Lead | `feat/c136-spatial-vision-ar-lead` |
+| **Parva Gaglani** | C172 | 70322200086 | B.Tech Computer Engineering (Integrated) | XR Systems Architect | `feat/c172-xr-systems-architect` |
+| **Vansh Panchal** | C139 | 70322200104 | B.Tech Computer Engineering (Integrated) | Graph Algorithms & Navigation Specialist | `feat/c139-graph-algorithms-nav` |
+| **Triesha Shah** | C174 | 70322200143 | B.Tech Computer Engineering (Integrated) | Human Factors & Usability Engineer | `feat/c174-human-factors-usability` |
 
 ---
 
-## Executive Abstract & Problem Scope
-Navigating large, multi-storey university academic complexes represents a major cognitive challenge for incoming first-year students, resulting in chronic orientation delays, missed lectures, and severe corridor congestion. While global satellite positioning (GPS) is ubiquitous outdoors, RF attenuation completely prevents indoor satellite reception. Standard mobile Augmented Reality (AR) frameworks (ARCore/ARKit) utilize monocular Visual-Inertial Odometry (VIO); however, uncorrected dead-reckoning tracking suffers from cumulative drift errors of $1\%$ to $3\%$ of total trajectory distance ($1.0$ to $3.0$ m error per $100$ m traversed), leading to detached guidance arrows that point into walls. Active RF beacon grids (Bluetooth Low Energy / Wi-Fi fingerprinting) suffer from battery exhaustion, signal reflection, and intensive calibration costs.
-
-This project implements a hybrid **AR Visual-Marker Indoor Navigation System** in Unity 2022.3 LTS with ARFoundation. The framework couples mobile VIO tracking with optical Perspective-n-Point (PnP) pose estimation over passive, high-contrast **ArUco (DICT_6X6_250)** and **QR anchors** strategically stationed at corridor junctions and stairwells. Detecting an anchor instantly recalibrates the AR camera pose back to ground-truth architectural BIM coordinates, suppressing cumulative tracking drift to $< 0.05$ m. A multi-floor 3D topological graph pathfinder executes $A^*$ routing across floors, projecting floating 3D directional arrows that guide students along optimal paths.
+## 🧭 Authorized Research Title
+> *"How can an AR visual-marker navigation system using ArUco and QR anchors optimize transit time and route-finding errors across multi-storey university buildings for first-year students?"*
 
 ---
 
-## Verified Foundational Literature (6 CrossRef DOIs)
+## 🏛️ Executive Summary & System Architecture
 
-| # | Citation Key | Full Canonical Title | Journal / Conference | Year | Verified DOI |
-|---|---|---|---|---|---|
-| 1 | `Kato1999` | Marker tracking and HMD calibration for a video-based augmented reality conferencing system | IEEE / ACM IWAR | 1999 | [10.1109/IWAR.1999.803809](https://doi.org/10.1109/IWAR.1999.803809) |
-| 2 | `GarridoJurado2014` | Automatic generation and detection of highly reliable fiducial markers under occlusion | Pattern Recognition | 2014 | [10.1016/j.patcog.2014.01.005](https://doi.org/10.1016/j.patcog.2014.01.005) |
-| 3 | `Asmara2023` | Marker vs. Markerless: Usability Insights for Indoor Navigation with Handheld Augmented Reality Systems | 2023 IEEE ICTS | 2023 | [10.1109/icts58770.2023.10330861](https://doi.org/10.1109/icts58770.2023.10330861) |
-| 4 | `Hinderer2025` | Investigation of ArUco Marker Placement for Planar Indoor Localization | 2025 IEEE ICAR | 2025 | [10.1109/icar65334.2025.11338671](https://doi.org/10.1109/icar65334.2025.11338671) |
-| 5 | `Miyashita2025` | Hierarchical ArUco Marker Array for Coarse-to-Fine Localization in XR applications | 2025 IEEE AIxVR | 2025 | [10.1109/aixvr63409.2025.00040](https://doi.org/10.1109/aixvr63409.2025.00040) |
-| 6 | `Dhanasekar2025` | Augmented Reality Indoor Navigation Using Unity and QR Code Localization for Cross-Platform Mobile Applications | 1st Int. Conf. Human-Centric Computing | 2025 | [10.5220/0013886300004919](https://doi.org/10.5220/0013886300004919) |
+**SmartCampus Wayfinding XR** is an interactive spatial computing wayfinding system engineered in **Unity 6 (`6000.5.7f1`)** targeting the **Meta Quest platform** via OpenXR. The system empowers incoming university students and campus visitors to seamlessly navigate unfamiliar multi-wing facilities.
 
----
+Users approach an interactive World-Space Navigation Kiosk at the campus arrival lobby, select any destination across academic wings, laboratories, the central library, dining commons, or upper terrace, and receive dynamic turn-by-turn route guidance. Guidance is visualized through glowing animated 3D floor chevrons, spatial path ribbons, and real-time HUD telemetry.
 
-## Student Engineering Team & Task Matrix
-
-| Roll No | Student Name | Degree Programme | Technical Role | Assigned Git Branch |
-| :--- | :--- | :--- | :--- | :--- |
-| `C136` | **Mishika Shah** | B.Tech / MBA (Tech) | Computer Vision & ArUco Pose Estimation Lead | `feat/c136-spatial-vision-ar-lead` |
-| `C172` | **Parva Gaglani** | B.Tech / MBA (Tech) | XR Systems Architect & VIO Drift Calibration Lead | `feat/c172-xr-systems-architect` |
-| `C139` | **Vansh Panchal** | B.Tech / MBA (Tech) | 3D Multi-Floor A* Graph & Pathfinding Specialist | `feat/c139-graph-algorithms-nav` |
-| `C174` | **Triesha Shah** | B.Tech / MBA (Tech) | Human Factors, AR UI/UX & Telemetry Engineer | `feat/c174-human-factors-usability` |
+### Core Architectural Pillars:
+1. **Mathematical A* Search Engine ($f = g + h$):**
+   - Evaluates accumulated walking distance $g(n)$ plus simulated crowd density penalties, combined with an admissible 3D Euclidean distance heuristic $h(n) = \lVert\mathbf{p}_n - \mathbf{p}_{\text{target}}\rVert$.
+   - **Step-Free Accessibility Filter:** Dynamically redirects wheelchair and stroller users through accessible ramps ($1:12$ slope) instead of staircases when `requireStepFree = true`.
+   - **Dynamic Rerouting:** Instantly recalculates alternative paths if a corridor is blocked or when user deviation exceeds $3.5\text{m}$.
+2. **Procedural Multi-Wing 3D Campus:**
+   - Synthesizes 19 topological landmarks and 20 bidirectional corridors with verified non-clipping physical bounds and URP forward+ materials.
+3. **Interactive World-Space Kiosk UI:**
+   - Proximity-triggered World-Space Canvas providing real-time destination metrics (distance, estimated transit time at $1.35\text{ m/s}$, and dynamic instruction banners).
+4. **Mandatory New Input System Compliance:**
+   - Built **strictly for the New Input System ONLY** (`activeInputHandler: 1`). ZERO legacy `UnityEngine.Input` API calls exist across the codebase.
+5. **Meta XR Simulator 2.0 Integration:**
+   - Native Unity Play Mode support using the installed Meta XR Simulator runtime for rapid iterative verification without physical headset tethering.
 
 ---
 
+## 📂 Submission Directory Layout
 
-### Student Engineering Commendation & Acknowledgments
-SVKM's NMIMS MPSTME conveys sincere appreciation and heartfelt gratitude to Mishika Shah (C136), Parva Gaglani (C172), Vansh Panchal (C139), Triesha Shah (C174) for their disciplined commitment, late-night debugging, and technical craftsmanship throughout Semester V. Your rigorous engineering inquiry and dedication to immersive XR environments exemplify the highest standards of undergraduate technical research.
-
-> *"Scientists discover the world that exists; engineers create the world that never was."*  
-> — **Theodore von Kármán**
-
-> *"There is no substitute for hard work. Genius is one percent inspiration and ninety-nine percent perspiration."*  
-> — **Thomas A. Edison**
-
----
-
-## Core System Architecture & Egress Telemetry
-
-The platform comprises four interconnected software modules:
-1. **Visual Anchor Grounding Core (`Assets/Scripts/ArUcoAnchorPoseManager.cs`):** Subpixel corner detection, Levenberg-Marquardt PnP pose calculation, and ARCore session drift reset.
-2. **Multi-Floor 3D Graph Pathfinder (`Assets/Scripts/MultiFloorRoutePathfinder.cs`):** Topological building connectivity network across 6 storeys, calculating multi-level $A^*$ routes with stairwell/elevator costs.
-3. **AR Guidance Renderer:** Floating animated directional arrows, distance-to-next-turn indicators, and destination room confirmation placards.
-4. **90 Hz Real-Time Telemetry Pipeline:** Continuous recording of user trajectory coordinates, path deviation from planned route, and wrong-turn incidents to CSV.
-
-### Publication-Grade Figures (300 DPI)
-- `docs/figures/figure1_system_architecture.png`: Multi-tier system architecture layout.
-- `docs/figures/figure2_kinematic_telemetry.png`: VIO drift suppression (< 5cm), PnP reprojection error curves, and backtracking incidents.
-- `docs/figures/figure3_comparative_performance.png`: Comparative trial results across navigation modalities.
-
----
-
----
-
-## Project Demonstration & Academic Showcase (LinkedIn)
-
-[![Watch Video Demonstration on LinkedIn](docs/figures/video_poster.png)](https://www.linkedin.com/)
-
-* **Video Demonstration:** [Watch 60-Second Walkthrough on LinkedIn](https://www.linkedin.com/) *(Click thumbnail above to open LinkedIn post)*
-* **Student Presenters:** **Mishika Shah** (C136), **Parva Gaglani** (C172), **Vansh Panchal** (C139), **Triesha Shah** (C174)
-* **Academic Institutional Tags:** SVKM's NMIMS MPSTME | Academic Directorate | Immersive VR/AR Technologies
-* **Submission Protocol:** Record a 60–90 second demonstration of your VR/AR interactive environment and telemetry. Publish on LinkedIn tagging MPSTME, Dean, and Course Faculty. Insert your live post URL in `docs/TEAM_ROSTER.json` under `"linkedin_url"`, and submit a pull request to update this project dossier and the cohort dashboard.
+```
+Group_06 Parva_Mishika_Vansh_Triesha/
+├── README.md                                          # Master group documentation (this file)
+├── submission_manifest.md                             # Comprehensive deliverable manifest
+├── docs/                                              # Academic dossiers & blueprints
+│   ├── IVRAR_Group_06_Technical_Dossier.docx          # Primary completed technical dossier
+│   ├── IVRAR_Group_06_Technical_Dossier.pdf           # Natively exported 6-page submission PDF
+│   ├── LITERATURE_REVIEW_AND_FOUNDATIONAL_PAPERS.md   # Literature review with verified CrossRef DOIs
+│   ├── RESEARCH_PAPER_MANUSCRIPT_BLUEPRINT.md         # 4-page IEEE research blueprint
+│   ├── TEAM_ROSTER.json                               # Cohort roster metadata
+│   ├── toolchain_spec.md                              # Hardware, SDK, and package spec
+│   └── figures/                                       # High-resolution architectural figures
+├── source/                                            # Authoritative clean Unity 6 project
+│   ├── Assets/                                        # Scripts, Scenes, Materials, Prefabs
+│   ├── Packages/                                      # manifest.json and packages-lock.json
+│   └── ProjectSettings/                               # Complete project settings & Input Actions
+├── builds/                                            # Standalone executables & verification
+│   ├── smartcampus.apk                                # Standalone Android / Meta Quest APK (83.2 MB)
+│   └── BUILD_VERIFICATION_REPORT.md                   # Build settings & test verification report
+└── member_contributions/                              # Distinct individual work attribution
+    ├── Parva/                                         # Core Architecture, Procedural Builder, VR Rig
+    ├── Mishika/                                       # Spatial Vision, ArUco Anchor Scaffold, Literature
+    ├── Vansh/                                         # A* Algorithm, Graph Engine, Floor Arrows, NUnit Tests
+    └── Triesha/                                       # World-Space Kiosk UI, Ray Pointer, Location Tracker
+```
 
 ---
 
-## Empirical Benchmark & Technoeconomic Highlights
-- **Multi-Storey Transit Time:** Compressed from $468.5 \pm 45.2$ s (wall signage) down to $184.6 \pm 14.5$ s using AR Navigation ($60.6\%$ reduction, $p < 0.001$).
-- **Route-Finding Errors:** Slashed from $6.8 \pm 1.2$ wrong turns down to $0.7 \pm 0.3$ errors ($89.7\%$ reduction).
-- **Tracking Accuracy:** VIO position error maintained strictly below $0.05$ m ($0.038 \pm 0.008$ m average).
-- **Technoeconomic Parity (\(\kappa\)):** Dimensionless cost parity $\kappa = 0.038$, reducing maintenance overhead by $96.2\%$ relative to active BLE beacons while reclaiming $2908.8$ student transit hours annually with capital payback in $12.5$ operating months.
+## 🧪 Verification & Automated Testing Results
+
+### Automated NUnit EditMode Test Suite
+The test suite was executed in Unity batchmode CLI:
+```xml
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0">
+  <test-case name="Graph_ContainsRequiredCampusLandmarks" result="Passed" />
+  <test-case name="Pathfinding_EntranceToLab204_Succeeds" result="Passed" />
+  <test-case name="Pathfinding_StepFreeRouting_ChoosesRampInsteadOfStairs" result="Passed" />
+  <test-case name="Pathfinding_CorridorClosure_ReroutesThroughBypass" result="Passed" />
+  <test-case name="ProjectOwnedScripts_ContainNoLegacyInputCalls" result="Passed" />
+</test-run>
+```
+- **100% Pass Rate (5/5 tests passed).**
+- **Legacy Input Audit:** 21 project-owned C# scripts audited; **0 legacy calls detected**.
+
+---
+
+## 🚀 Running the Project
+
+### Option A: Unity Editor Play Mode (Meta XR Simulator)
+1. Open Unity Hub and add `source/` (or the project root).
+2. Open in **Unity 6 (`6000.5.7f1`)**.
+3. Open scene `Assets/Scenes/SampleScene.unity` or `Assets/SmartCampus/Scenes/SmartCampusScene.unity`.
+4. Press **Play** — the Meta XR Simulator window initializes automatically.
+5. **Locomotion:** Use W / A / S / D keys to walk, Right Mouse Button drag to look around, and Left Mouse Button to click buttons. In VR, use controller thumbsticks and trigger.
+
+### Option B: Standalone Meta Quest Installation
+1. Connect Meta Quest headset with Developer Mode enabled.
+2. Install the standalone package via ADB:
+   ```bash
+   adb install -r builds/smartcampus.apk
+   ```
+
+---
+
+## 📦 Review Workspace Archives (Root Workspace)
+For convenient faculty review and individual contribution assessment, four self-contained archives are generated at the workspace root:
+- `Parva.zip` (25.2 KB)
+- `Mishika.zip` (5.8 KB)
+- `Vansh.zip` (20.0 KB)
+- `Triesha.zip` (29.6 KB)
