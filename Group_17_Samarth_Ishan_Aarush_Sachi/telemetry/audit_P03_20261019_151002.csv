@@ -1,0 +1,65 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P03,20261019_151002,0.00,5:45 PM,event,Shift started
+P03,20261019_151002,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P03,20261019_151002,0.00,5:45 PM,room,enter OpenPlan
+P03,20261019_151002,17.95,5:45 PM,event,Voicemail answered
+P03,20261019_151002,20.01,5:46 PM,event,EmailQr triggered
+P03,20261019_151002,20.01,5:46 PM,event,Notify: New email in your inbox.
+P03,20261019_151002,52.21,5:47 PM,event,Client report sent
+P03,20261019_151002,91.11,5:49 PM,decision,EmailQr: ignored the email
+P03,20261019_151002,118.79,5:50 PM,event,Colleague triggered
+P03,20261019_151002,118.79,5:50 PM,event,Notify: New chat message on your monitor.
+P03,20261019_151002,127.49,5:51 PM,decision,Colleague: helped Mei with the request
+P03,20261019_151002,150.01,5:52 PM,event,Usb triggered
+P03,20261019_151002,182.03,5:54 PM,event,Intercom triggered
+P03,20261019_151002,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P03,20261019_151002,192.80,5:54 PM,room,exit OpenPlan
+P03,20261019_151002,192.80,5:54 PM,room,enter Corridor
+P03,20261019_151002,200.94,5:55 PM,room,exit Corridor
+P03,20261019_151002,200.94,5:55 PM,room,enter ItRoomDoor
+P03,20261019_151002,202.10,5:55 PM,room,exit ItRoomDoor
+P03,20261019_151002,202.10,5:55 PM,room,enter Lobby
+P03,20261019_151002,220.58,5:56 PM,decision,Intercom: answered
+P03,20261019_151002,236.72,5:56 PM,decision,Intercom: asked to see badge
+P03,20261019_151002,274.49,5:58 PM,decision,Intercom: left the visitor waiting until he gave up
+P03,20261019_151002,301.65,6:00 PM,room,exit Lobby
+P03,20261019_151002,301.65,6:00 PM,room,enter ItRoomDoor
+P03,20261019_151002,302.46,6:00 PM,room,exit ItRoomDoor
+P03,20261019_151002,302.46,6:00 PM,room,enter Corridor
+P03,20261019_151002,306.27,6:00 PM,room,exit Corridor
+P03,20261019_151002,306.27,6:00 PM,room,enter FinancePod
+P03,20261019_151002,310.43,6:00 PM,event,Workstation triggered
+P03,20261019_151002,313.85,6:00 PM,decision,Workstation: ignored the unlocked screen
+P03,20261019_151002,313.85,6:00 PM,event,Security terminal activated
+P03,20261019_151002,313.85,6:00 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P03,20261019_151002,327.75,6:01 PM,room,exit FinancePod
+P03,20261019_151002,327.75,6:01 PM,room,enter Corridor
+P03,20261019_151002,336.68,6:01 PM,room,exit Corridor
+P03,20261019_151002,336.68,6:01 PM,room,enter OpenPlan
+P03,20261019_151002,385.09,6:04 PM,decision,Usb: left the USB drive where it was
+P03,20261019_151002,403.19,6:05 PM,room,exit OpenPlan
+P03,20261019_151002,403.19,6:05 PM,room,enter Corridor
+P03,20261019_151002,416.91,6:05 PM,room,exit Corridor
+P03,20261019_151002,416.91,6:05 PM,room,enter MeetingRoom3
+P03,20261019_151002,449.80,6:07 PM,room,exit MeetingRoom3
+P03,20261019_151002,449.80,6:07 PM,room,enter Corridor
+P03,20261019_151002,452.87,6:07 PM,room,exit Corridor
+P03,20261019_151002,452.87,6:07 PM,room,enter FinancePod
+P03,20261019_151002,476.57,6:08 PM,room,exit FinancePod
+P03,20261019_151002,476.57,6:08 PM,room,enter Corridor
+P03,20261019_151002,482.88,6:09 PM,room,exit Corridor
+P03,20261019_151002,482.88,6:09 PM,room,enter OpenPlan
+P03,20261019_151002,486.71,6:09 PM,room,exit OpenPlan
+P03,20261019_151002,486.71,6:09 PM,room,enter Corridor
+P03,20261019_151002,494.85,6:09 PM,room,exit Corridor
+P03,20261019_151002,494.85,6:09 PM,room,enter MeetingRoom3
+P03,20261019_151002,504.14,6:10 PM,room,exit MeetingRoom3
+P03,20261019_151002,504.14,6:10 PM,room,enter Corridor
+P03,20261019_151002,511.16,6:10 PM,room,exit Corridor
+P03,20261019_151002,511.16,6:10 PM,room,enter ItRoomDoor
+P03,20261019_151002,512.35,6:10 PM,room,exit ItRoomDoor
+P03,20261019_151002,512.35,6:10 PM,room,enter Lobby
+P03,20261019_151002,600.01,6:15 PM,event,Mfa triggered
+P03,20261019_151002,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P03,20261019_151002,618.37,6:15 PM,decision,Deduction: incorrect
+P03,20261019_151002,655.30,6:17 PM,decision,Incident report filed (5 items ticked)

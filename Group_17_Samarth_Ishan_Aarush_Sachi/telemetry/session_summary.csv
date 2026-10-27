@@ -1,0 +1,12 @@
+participant_id,session_id,attempt,training_arm,data_source,started_utc,ending,score,situations_reached,attacks_reached,compromise_sources,breach_rate,credential_disclosure,unauthorised_entry,mean_challenge_latency_sec,verification_actions,false_positives,false_negatives,report_filed,deduction_correct,policy_board_read,game_minutes_at_end
+P01,20261019_120732,1,VR_Interactive,Headset,2026-10-19T12:07:32.8624210Z,ContainedButExposed,66,5,3,1,0.333,False,False,104.12,1,1,1,True,False,False,31.7
+P02,20261019_134415,1,VR_Interactive,Headset,2026-10-19T13:44:15.4240080Z,ContainedButExposed,78,5,3,1,0.333,True,False,83.49,1,0,1,True,False,True,31.8
+P03,20261019_151002,1,VR_Interactive,Headset,2026-10-19T15:10:02.1930429Z,FullContainment,100,5,3,0,0.0,False,False,88.36,1,0,0,True,False,False,32.8
+P04,20261019_164839,1,VR_Interactive,Headset,2026-10-19T16:48:39.3989798Z,ContainedButExposed,66,5,3,1,0.333,True,False,103.07,0,1,1,True,False,False,32.1
+P05,20261020_093355,1,VR_Interactive,Headset,2026-10-20T09:33:55.8399006Z,Breach,56,5,3,2,0.667,True,True,94.62,2,0,2,True,False,True,32.9
+P06,20261020_104128,1,VR_Interactive,Headset,2026-10-20T10:41:28.8340794Z,Breach,56,5,3,2,0.667,True,False,109.12,1,0,2,True,False,False,31.1
+P07,20261020_121706,1,VR_Interactive,Headset,2026-10-20T12:17:06.6518841Z,ContainedButExposed,66,5,3,1,0.333,False,True,103.14,1,1,1,True,False,True,32.5
+P08,20261020_143921,1,VR_Interactive,Headset,2026-10-20T14:39:21.1462677Z,FullContainment,100,6,4,0,0.0,False,False,100.77,4,0,0,True,False,False,32.5
+P09,20261020_160257,1,VR_Interactive,Headset,2026-10-20T16:02:57.3784912Z,ContainedButExposed,66,5,3,1,0.333,True,False,93.59,2,1,1,True,False,True,32.0
+P10,20261021_091144,1,VR_Interactive,Desktop,2026-10-21T09:11:44.3357657Z,Breach,56,6,4,2,0.5,True,False,99.76,0,0,2,True,False,False,32.5
+P11,20261021_105530,1,VR_Interactive,Desktop,2026-10-21T10:55:30.1280081Z,ContainedButExposed,78,6,4,1,0.25,False,True,83.16,3,0,1,True,False,False,33.1

@@ -1,4 +1,4 @@
-# Research and Implementation Guide: Collaborative VR Emergency Evacuation Simulator
+# Research and Implementation Guide: VR Emergency Evacuation Simulator
 
 ## Project: IVRAR Group 03
 ## Target Venue: IEEE VR / ACM VRST / Fire Safety Journal

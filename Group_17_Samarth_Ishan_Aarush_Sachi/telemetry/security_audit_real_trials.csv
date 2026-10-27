@@ -1,0 +1,59 @@
+trial_id,participant_id,training_arm,pretext,action_taken,decision_latency_sec,gaze_dwell_badge_sec,min_distance_m,is_compliant,tailgating_permitted,session_id,attempt,outcome,outcome_score,ground_truth,classification,compromise,credential_disclosure,data_source
+1,P01,VR_Interactive,EmailQr,forwarded to IT-Security,51.78,,,True,False,20261019_120732,1,ForwardedToSecurity,1.0,attack,TP,False,False,Headset
+2,P01,VR_Interactive,Colleague,refused Priya's request,20.2,,,False,False,20261019_120732,1,RefusedOutright,0.5,legitimate,FP,False,False,Headset
+3,P01,VR_Interactive,Workstation,locked the colleague's screen,6.24,,,True,False,20261019_120732,1,Locked,0.75,attack,TP,False,False,Headset
+4,P01,VR_Interactive,Intercom,left the visitor waiting until he gave up,120.0,11.23,1.04,True,False,20261019_120732,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+5,P01,VR_Interactive,Usb,plugged the USB drive into the PC,322.37,,,False,False,20261019_120732,1,Plugged,0.0,attack,FN,True,False,Headset
+1,P02,VR_Interactive,EmailQr,clicked the link,46.05,,,False,False,20261019_134415,1,ClickedLink,0.0,attack,FN,True,True,Headset
+2,P02,VR_Interactive,Colleague,asked Priya to verify by phone,24.9,,,True,False,20261019_134415,1,VerifiedByPhone,1.0,legitimate,TN,False,False,Headset
+3,P02,VR_Interactive,Workstation,ignored the unlocked screen,3.19,,,False,False,20261019_134415,1,Ignored,0.5,attack,TP,False,False,Headset
+4,P02,VR_Interactive,Intercom,left the visitor waiting until he gave up,82.52,,,True,False,20261019_134415,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+5,P02,VR_Interactive,Usb,left the USB drive where it was,180.49,,,False,False,20261019_134415,1,LeftAlone,0.5,attack,TP,False,False,Headset
+1,P03,VR_Interactive,EmailQr,ignored the email,71.1,,,False,False,20261019_151002,1,Ignored,0.5,attack,TP,False,False,Headset
+2,P03,VR_Interactive,Colleague,helped Priya with the request,8.7,,,True,False,20261019_151002,1,Helped,1.0,legitimate,TN,False,False,Headset
+3,P03,VR_Interactive,Intercom,left the visitor waiting until he gave up,92.46,13.49,0.96,True,False,20261019_151002,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+4,P03,VR_Interactive,Workstation,ignored the unlocked screen,3.42,,,False,False,20261019_151002,1,Ignored,0.5,attack,TP,False,False,Headset
+5,P03,VR_Interactive,Usb,left the USB drive where it was,235.08,,,False,False,20261019_151002,1,LeftAlone,0.5,attack,TP,False,False,Headset
+1,P04,VR_Interactive,EmailQr,scanned the QR code,65.66,,,False,False,20261019_164839,1,ScannedQr,0.0,attack,FN,True,True,Headset
+2,P04,VR_Interactive,Colleague,refused Priya's request,17.22,,,False,False,20261019_164839,1,RefusedOutright,0.5,legitimate,FP,False,False,Headset
+3,P04,VR_Interactive,Workstation,ignored the unlocked screen,8.05,,,False,False,20261019_164839,1,Ignored,0.5,attack,TP,False,False,Headset
+4,P04,VR_Interactive,Intercom,left the visitor waiting until he gave up,120.0,,,True,False,20261019_164839,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+5,P04,VR_Interactive,Usb,left the USB drive where it was,203.43,,,False,False,20261019_164839,1,LeftAlone,0.5,attack,TP,False,False,Headset
+1,P05,VR_Interactive,EmailQr,scanned the QR code,61.87,,,False,False,20261020_093355,1,ScannedQr,0.0,attack,FN,True,True,Headset
+2,P05,VR_Interactive,Colleague,asked Priya to verify by phone,17.66,,,True,False,20261020_093355,1,VerifiedByPhone,1.0,legitimate,TN,False,False,Headset
+3,P05,VR_Interactive,Intercom,let the visitor in,94.97,4.31,0.93,False,True,20261020_093355,1,LetIn,0.0,attack,FN,True,False,Headset
+4,P05,VR_Interactive,Workstation,locked the colleague's screen,3.6,,,True,False,20261020_093355,1,Locked,0.75,attack,TP,False,False,Headset
+5,P05,VR_Interactive,Usb,threw the USB drive away,257.71,,,True,False,20261020_093355,1,Discarded,0.75,attack,TP,False,False,Headset
+1,P06,VR_Interactive,EmailQr,scanned the QR code,35.62,,,False,False,20261020_104128,1,ScannedQr,0.0,attack,FN,True,True,Headset
+2,P06,VR_Interactive,Colleague,asked Priya to verify by phone,28.69,,,True,False,20261020_104128,1,VerifiedByPhone,1.0,legitimate,TN,False,False,Headset
+3,P06,VR_Interactive,Workstation,locked the colleague's screen,3.02,,,True,False,20261020_104128,1,Locked,0.75,attack,TP,False,False,Headset
+4,P06,VR_Interactive,Intercom,left the visitor waiting until he gave up,120.0,,,True,False,20261020_104128,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+5,P06,VR_Interactive,Usb,plugged the USB drive into the PC,248.55,,,False,False,20261020_104128,1,Plugged,0.0,attack,FN,True,False,Headset
+1,P07,VR_Interactive,EmailQr,deleted the email,64.69,,,True,False,20261020_121706,1,Deleted,0.75,attack,TP,False,False,Headset
+2,P07,VR_Interactive,Colleague,refused Priya's request,14.07,,,False,False,20261020_121706,1,RefusedOutright,0.5,legitimate,FP,False,False,Headset
+3,P07,VR_Interactive,Intercom,let the visitor in,104.7,7.53,0.7,False,True,20261020_121706,1,LetIn,0.0,attack,FN,True,False,Headset
+4,P07,VR_Interactive,Workstation,locked the colleague's screen,9.08,,,True,False,20261020_121706,1,Locked,0.75,attack,TP,False,False,Headset
+5,P07,VR_Interactive,Usb,left the USB drive where it was,272.17,,,False,False,20261020_121706,1,LeftAlone,0.5,attack,TP,False,False,Headset
+1,P08,VR_Interactive,EmailQr,forwarded to IT-Security,52.01,,,True,False,20261020_143921,1,ForwardedToSecurity,1.0,attack,TP,False,False,Headset
+2,P08,VR_Interactive,Colleague,asked Priya to verify by phone,31.58,,,True,False,20261020_143921,1,VerifiedByPhone,1.0,legitimate,TN,False,False,Headset
+3,P08,VR_Interactive,Intercom,left the visitor waiting until he gave up,120.0,9.43,1.4,True,False,20261020_143921,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+4,P08,VR_Interactive,Workstation,locked the colleague's screen,5.45,,,True,False,20261020_143921,1,Locked,0.75,attack,TP,False,False,Headset
+5,P08,VR_Interactive,Usb,handed the USB drive to IT,239.86,,,True,False,20261020_143921,1,HandedToIT,1.0,attack,TP,False,False,Headset
+6,P08,VR_Interactive,Mfa,denied the prompt,6.41,,,True,False,20261020_143921,1,Denied,1.0,attack,TP,False,False,Headset
+1,P09,VR_Interactive,EmailQr,scanned the QR code,38.88,,,False,False,20261020_160257,1,ScannedQr,0.0,attack,FN,True,True,Headset
+2,P09,VR_Interactive,Colleague,refused Priya's request,21.58,,,False,False,20261020_160257,1,RefusedOutright,0.5,legitimate,FP,False,False,Headset
+3,P09,VR_Interactive,Intercom,left the visitor waiting until he gave up,96.36,5.73,1.13,True,False,20261020_160257,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Headset
+4,P09,VR_Interactive,Workstation,ignored the unlocked screen,5.48,,,False,False,20261020_160257,1,Ignored,0.5,attack,TP,False,False,Headset
+5,P09,VR_Interactive,Usb,handed the USB drive to IT,276.37,,,True,False,20261020_160257,1,HandedToIT,1.0,attack,TP,False,False,Headset
+1,P10,VR_Interactive,EmailQr,forwarded to IT-Security,47.35,,,True,False,20261021_091144,1,ForwardedToSecurity,1.0,attack,TP,False,False,Desktop
+2,P10,VR_Interactive,Colleague,helped Priya with the request,12.44,,,True,False,20261021_091144,1,Helped,1.0,legitimate,TN,False,False,Desktop
+3,P10,VR_Interactive,Intercom,left the visitor waiting until he gave up,91.13,,,True,False,20261021_091144,1,RefusedWithoutVerifying,0.75,attack,TP,False,False,Desktop
+4,P10,VR_Interactive,Workstation,ignored the unlocked screen,4.88,,,False,False,20261021_091144,1,Ignored,0.5,attack,TP,False,False,Desktop
+5,P10,VR_Interactive,Usb,plugged the USB drive into the PC,248.12,,,False,False,20261021_091144,1,Plugged,0.0,attack,FN,True,False,Desktop
+6,P10,VR_Interactive,Mfa,approved the prompt,6.15,,,False,False,20261021_091144,1,Approved,0.0,attack,FN,True,True,Desktop
+1,P11,VR_Interactive,EmailQr,ignored the email,43.87,,,False,False,20261021_105530,1,Ignored,0.5,attack,TP,False,False,Desktop
+2,P11,VR_Interactive,Colleague,helped Priya with the request,33.7,,,True,False,20261021_105530,1,Helped,1.0,legitimate,TN,False,False,Desktop
+3,P11,VR_Interactive,Intercom,let the visitor in,70.78,11.39,0.63,False,True,20261021_105530,1,LetIn,0.0,attack,FN,True,False,Desktop
+4,P11,VR_Interactive,Workstation,ignored the unlocked screen,6.34,,,False,False,20261021_105530,1,Ignored,0.5,attack,TP,False,False,Desktop
+5,P11,VR_Interactive,Usb,handed the USB drive to IT,221.0,,,True,False,20261021_105530,1,HandedToIT,1.0,attack,TP,False,False,Desktop
+6,P11,VR_Interactive,Mfa,denied the prompt,9.34,,,True,False,20261021_105530,1,Denied,1.0,attack,TP,False,False,Desktop

@@ -1,0 +1,55 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P06,20261020_104128,0.00,5:45 PM,event,Shift started
+P06,20261020_104128,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P06,20261020_104128,0.00,5:45 PM,room,enter OpenPlan
+P06,20261020_104128,14.93,5:45 PM,event,Voicemail answered
+P06,20261020_104128,20.01,5:46 PM,event,EmailQr triggered
+P06,20261020_104128,20.01,5:46 PM,event,Notify: New email in your inbox.
+P06,20261020_104128,49.58,5:47 PM,event,Client report sent
+P06,20261020_104128,55.63,5:47 PM,decision,EmailQr: scanned the QR code
+P06,20261020_104128,114.45,5:50 PM,event,Colleague triggered
+P06,20261020_104128,114.45,5:50 PM,event,Notify: New chat message on your monitor.
+P06,20261020_104128,143.14,5:52 PM,decision,Colleague: asked Priya to verify by phone
+P06,20261020_104128,150.01,5:52 PM,event,Usb triggered
+P06,20261020_104128,182.03,5:54 PM,event,Intercom triggered
+P06,20261020_104128,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P06,20261020_104128,271.01,5:58 PM,room,exit OpenPlan
+P06,20261020_104128,271.01,5:58 PM,room,enter Corridor
+P06,20261020_104128,277.63,5:58 PM,room,exit Corridor
+P06,20261020_104128,277.63,5:58 PM,room,enter FinancePod
+P06,20261020_104128,279.74,5:58 PM,event,Workstation triggered
+P06,20261020_104128,282.76,5:59 PM,decision,Workstation: locked the colleague's screen
+P06,20261020_104128,282.76,5:59 PM,event,Security terminal activated
+P06,20261020_104128,282.76,5:59 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P06,20261020_104128,300.55,6:00 PM,room,exit FinancePod
+P06,20261020_104128,300.55,6:00 PM,room,enter Corridor
+P06,20261020_104128,305.65,6:00 PM,decision,Intercom: left the visitor waiting until he gave up
+P06,20261020_104128,312.42,6:00 PM,room,exit Corridor
+P06,20261020_104128,312.42,6:00 PM,room,enter OpenPlan
+P06,20261020_104128,398.56,6:04 PM,decision,Usb: plugged the USB drive into the PC
+P06,20261020_104128,415.77,6:05 PM,room,exit OpenPlan
+P06,20261020_104128,415.77,6:05 PM,room,enter Corridor
+P06,20261020_104128,417.45,6:05 PM,room,exit Corridor
+P06,20261020_104128,417.45,6:05 PM,room,enter BreakRoom
+P06,20261020_104128,424.58,6:06 PM,room,exit BreakRoom
+P06,20261020_104128,424.58,6:06 PM,room,enter Corridor
+P06,20261020_104128,430.74,6:06 PM,room,exit Corridor
+P06,20261020_104128,430.74,6:06 PM,room,enter OpenPlan
+P06,20261020_104128,453.24,6:07 PM,room,exit OpenPlan
+P06,20261020_104128,453.24,6:07 PM,room,enter Corridor
+P06,20261020_104128,464.80,6:08 PM,room,exit Corridor
+P06,20261020_104128,464.80,6:08 PM,room,enter MeetingRoom3
+P06,20261020_104128,473.25,6:08 PM,room,exit MeetingRoom3
+P06,20261020_104128,473.25,6:08 PM,room,enter Corridor
+P06,20261020_104128,489.21,6:09 PM,room,exit Corridor
+P06,20261020_104128,489.21,6:09 PM,room,enter OpenPlan
+P06,20261020_104128,508.18,6:10 PM,room,exit OpenPlan
+P06,20261020_104128,508.18,6:10 PM,room,enter Corridor
+P06,20261020_104128,524.03,6:11 PM,room,exit Corridor
+P06,20261020_104128,524.03,6:11 PM,room,enter ItRoomDoor
+P06,20261020_104128,525.11,6:11 PM,room,exit ItRoomDoor
+P06,20261020_104128,525.11,6:11 PM,room,enter Lobby
+P06,20261020_104128,600.01,6:15 PM,event,Mfa triggered
+P06,20261020_104128,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P06,20261020_104128,608.24,6:15 PM,decision,Deduction: incorrect
+P06,20261020_104128,621.98,6:16 PM,decision,Incident report filed (4 items ticked)

@@ -1,0 +1,65 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P09,20261020_160257,0.00,5:45 PM,event,Shift started
+P09,20261020_160257,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P09,20261020_160257,0.00,5:45 PM,room,enter OpenPlan
+P09,20261020_160257,11.60,5:45 PM,event,Voicemail answered
+P09,20261020_160257,20.01,5:46 PM,event,EmailQr triggered
+P09,20261020_160257,20.01,5:46 PM,event,Notify: New email in your inbox.
+P09,20261020_160257,54.76,5:47 PM,event,Client report sent
+P09,20261020_160257,58.89,5:47 PM,decision,EmailQr: scanned the QR code
+P09,20261020_160257,117.57,5:50 PM,event,Colleague triggered
+P09,20261020_160257,117.57,5:50 PM,event,Notify: New chat message on your monitor.
+P09,20261020_160257,139.15,5:51 PM,decision,Colleague: refused Elena's request
+P09,20261020_160257,150.01,5:52 PM,event,Usb triggered
+P09,20261020_160257,182.03,5:54 PM,event,Intercom triggered
+P09,20261020_160257,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P09,20261020_160257,199.02,5:54 PM,room,exit OpenPlan
+P09,20261020_160257,199.02,5:54 PM,room,enter Corridor
+P09,20261020_160257,202.43,5:55 PM,room,exit Corridor
+P09,20261020_160257,202.43,5:55 PM,room,enter ItRoomDoor
+P09,20261020_160257,203.47,5:55 PM,room,exit ItRoomDoor
+P09,20261020_160257,203.47,5:55 PM,room,enter Lobby
+P09,20261020_160257,219.55,5:55 PM,decision,Intercom: answered
+P09,20261020_160257,229.80,5:56 PM,decision,Intercom: asked to see badge
+P09,20261020_160257,278.39,5:58 PM,decision,Intercom: left the visitor waiting until he gave up
+P09,20261020_160257,289.85,5:59 PM,room,exit Lobby
+P09,20261020_160257,289.85,5:59 PM,room,enter ItRoomDoor
+P09,20261020_160257,290.66,5:59 PM,room,exit ItRoomDoor
+P09,20261020_160257,290.66,5:59 PM,room,enter Corridor
+P09,20261020_160257,306.43,6:00 PM,room,exit Corridor
+P09,20261020_160257,306.43,6:00 PM,room,enter FinancePod
+P09,20261020_160257,311.89,6:00 PM,event,Workstation triggered
+P09,20261020_160257,317.37,6:00 PM,decision,Workstation: ignored the unlocked screen
+P09,20261020_160257,317.37,6:00 PM,event,Security terminal activated
+P09,20261020_160257,317.37,6:00 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P09,20261020_160257,324.19,6:01 PM,room,exit FinancePod
+P09,20261020_160257,324.19,6:01 PM,room,enter Corridor
+P09,20261020_160257,334.51,6:01 PM,room,exit Corridor
+P09,20261020_160257,334.51,6:01 PM,room,enter OpenPlan
+P09,20261020_160257,426.38,6:06 PM,decision,Usb: handed the USB drive to IT
+P09,20261020_160257,473.38,6:08 PM,room,exit OpenPlan
+P09,20261020_160257,473.38,6:08 PM,room,enter Corridor
+P09,20261020_160257,480.12,6:09 PM,room,exit Corridor
+P09,20261020_160257,480.12,6:09 PM,room,enter MeetingRoom3
+P09,20261020_160257,496.27,6:09 PM,room,exit MeetingRoom3
+P09,20261020_160257,496.27,6:09 PM,room,enter Corridor
+P09,20261020_160257,504.91,6:10 PM,room,exit Corridor
+P09,20261020_160257,504.91,6:10 PM,room,enter OpenPlan
+P09,20261020_160257,510.80,6:10 PM,room,exit OpenPlan
+P09,20261020_160257,510.80,6:10 PM,room,enter Corridor
+P09,20261020_160257,513.04,6:10 PM,room,exit Corridor
+P09,20261020_160257,513.04,6:10 PM,room,enter MeetingRoom3
+P09,20261020_160257,523.00,6:11 PM,room,exit MeetingRoom3
+P09,20261020_160257,523.00,6:11 PM,room,enter Corridor
+P09,20261020_160257,536.21,6:11 PM,room,exit Corridor
+P09,20261020_160257,536.21,6:11 PM,room,enter FinancePod
+P09,20261020_160257,551.68,6:12 PM,room,exit FinancePod
+P09,20261020_160257,551.68,6:12 PM,room,enter Corridor
+P09,20261020_160257,552.93,6:12 PM,room,exit Corridor
+P09,20261020_160257,552.93,6:12 PM,room,enter ItRoomDoor
+P09,20261020_160257,554.12,6:12 PM,room,exit ItRoomDoor
+P09,20261020_160257,554.12,6:12 PM,room,enter Lobby
+P09,20261020_160257,600.01,6:15 PM,event,Mfa triggered
+P09,20261020_160257,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P09,20261020_160257,615.85,6:15 PM,decision,Deduction: incorrect
+P09,20261020_160257,639.76,6:16 PM,decision,Incident report filed (3 items ticked)

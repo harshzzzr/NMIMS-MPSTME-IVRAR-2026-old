@@ -1,0 +1,58 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P08,20261020_143921,0.00,5:45 PM,event,Shift started
+P08,20261020_143921,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P08,20261020_143921,0.00,5:45 PM,room,enter OpenPlan
+P08,20261020_143921,18.40,5:45 PM,event,Voicemail answered
+P08,20261020_143921,20.01,5:46 PM,event,EmailQr triggered
+P08,20261020_143921,20.01,5:46 PM,event,Notify: New email in your inbox.
+P08,20261020_143921,64.18,5:48 PM,event,Client report sent
+P08,20261020_143921,72.02,5:48 PM,decision,EmailQr: forwarded to IT-Security
+P08,20261020_143921,109.01,5:50 PM,event,Colleague triggered
+P08,20261020_143921,109.01,5:50 PM,event,Notify: New chat message on your monitor.
+P08,20261020_143921,140.59,5:52 PM,decision,Colleague: asked Elena to verify by phone
+P08,20261020_143921,150.01,5:52 PM,event,Usb triggered
+P08,20261020_143921,182.03,5:54 PM,event,Intercom triggered
+P08,20261020_143921,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P08,20261020_143921,231.44,5:56 PM,room,exit OpenPlan
+P08,20261020_143921,231.44,5:56 PM,room,enter Corridor
+P08,20261020_143921,242.21,5:57 PM,room,exit Corridor
+P08,20261020_143921,242.21,5:57 PM,room,enter ItRoomDoor
+P08,20261020_143921,243.23,5:57 PM,room,exit ItRoomDoor
+P08,20261020_143921,243.23,5:57 PM,room,enter Lobby
+P08,20261020_143921,261.65,5:58 PM,decision,Intercom: answered
+P08,20261020_143921,273.26,5:58 PM,decision,Intercom: asked to see badge
+P08,20261020_143921,310.09,6:00 PM,decision,Intercom: left the visitor waiting until he gave up
+P08,20261020_143921,313.23,6:00 PM,room,exit Lobby
+P08,20261020_143921,313.23,6:00 PM,room,enter ItRoomDoor
+P08,20261020_143921,314.09,6:00 PM,room,exit ItRoomDoor
+P08,20261020_143921,314.09,6:00 PM,room,enter Corridor
+P08,20261020_143921,315.92,6:00 PM,room,exit Corridor
+P08,20261020_143921,315.92,6:00 PM,room,enter FinancePod
+P08,20261020_143921,318.84,6:00 PM,event,Workstation triggered
+P08,20261020_143921,324.29,6:01 PM,decision,Workstation: locked the colleague's screen
+P08,20261020_143921,324.29,6:01 PM,event,Security terminal activated
+P08,20261020_143921,324.29,6:01 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P08,20261020_143921,331.21,6:01 PM,room,exit FinancePod
+P08,20261020_143921,331.21,6:01 PM,room,enter Corridor
+P08,20261020_143921,334.95,6:01 PM,room,exit Corridor
+P08,20261020_143921,334.95,6:01 PM,room,enter OpenPlan
+P08,20261020_143921,389.87,6:04 PM,decision,Usb: handed the USB drive to IT
+P08,20261020_143921,461.59,6:08 PM,room,exit OpenPlan
+P08,20261020_143921,461.59,6:08 PM,room,enter Corridor
+P08,20261020_143921,468.73,6:08 PM,room,exit Corridor
+P08,20261020_143921,468.73,6:08 PM,room,enter MeetingRoom3
+P08,20261020_143921,477.13,6:08 PM,room,exit MeetingRoom3
+P08,20261020_143921,477.13,6:08 PM,room,enter Corridor
+P08,20261020_143921,487.76,6:09 PM,room,exit Corridor
+P08,20261020_143921,487.76,6:09 PM,room,enter OpenPlan
+P08,20261020_143921,517.89,6:10 PM,room,exit OpenPlan
+P08,20261020_143921,517.89,6:10 PM,room,enter Corridor
+P08,20261020_143921,526.00,6:11 PM,room,exit Corridor
+P08,20261020_143921,526.00,6:11 PM,room,enter ItRoomDoor
+P08,20261020_143921,527.00,6:11 PM,room,exit ItRoomDoor
+P08,20261020_143921,527.00,6:11 PM,room,enter Lobby
+P08,20261020_143921,600.01,6:15 PM,event,Mfa triggered
+P08,20261020_143921,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P08,20261020_143921,606.42,6:15 PM,decision,Mfa: denied the prompt
+P08,20261020_143921,624.61,6:16 PM,decision,Deduction: incorrect
+P08,20261020_143921,650.21,6:17 PM,decision,Incident report filed (4 items ticked)

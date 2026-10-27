@@ -1,98 +1,78 @@
-# IVRAR Group 17: Interactive VR Physical Security Audit Simulation
-**Course:** Introduction to Virtual Reality & Augmented Reality (IVRAR - Course Code: 702COI002)  
-**Academic Term:** Academic Year 2026–2027 | Semester V  
-**Institution:** SVKM's NMIMS MPSTME, Mumbai  
+# CyberQuest – The Compromised Office
 
+A VR cybersecurity-awareness game for Meta Quest (Unity 6, URP, Meta XR SDK). You're the last employee in the
+office from 5:45 to 6:30 PM; six attacks and one genuine colleague request arrive one at a time, and your choices
+decide the ending.
 
-## Authorized Research Title
-> **"To what extent can an interactive VR physical security audit simulation reduce employee credential disclosure and unauthorized building entry rates during simulated corporate social-engineering attacks?"**
+- How the game plays, step by step: [`docs/GAME_FLOW.md`](docs/GAME_FLOW.md)
+- Floor plan: [`docs/FLOORPLAN.md`](docs/FLOORPLAN.md)
+- Design spec (source of truth): [`CLAUDE.md`](CLAUDE.md)
+- Testing: [`TESTING.md`](TESTING.md)
 
----
+## How to read the instructions below
 
-> [!NOTE]
-> ### The Devil's Advocate: Reality Check & Theoretical Roast
-> *"Creating an immersive physical security audit to train guards to challenge tailgaters at electronic badge gates, proving that the most advanced biometric turnstile in the world is instantly defeated by someone holding a box of donuts and smiling politely."*
+An arrow `>` means "click this, then click that" in Unity's menu bar at the top of the editor window.
+For example, **`CyberQuest > 3. Build APK`** means:
 
----
+1. Click **CyberQuest** in the menu bar (next to File, Edit, Assets, ...).
+2. In the list that drops down, click **3. Build APK**.
 
-## Executive Abstract & Problem Scope
-Corporate physical facilities guarded by sophisticated access control turnstiles and biometric readers remain vulnerable to social engineering attacks, where malicious actors exploit human politeness norms to tailgate through secure portals. Traditional organizational security training relies on passive annual slide decks or video lectures, which fail to instill behavioral assertiveness or reflexive challenge procedures when facing persistent social engineering pretexts in real time.
+`File > Build Profiles` works the same way: click **File**, then **Build Profiles**.
+The numbers in the CyberQuest menu (1, 2, 3 ...) are just the order the items are listed in.
 
-This project delivers an **Interactive Virtual Reality Physical Security Audit Simulation Platform** engineered in Unity 2022.3 LTS. The platform immerses enterprise personnel within a photorealistic corporate lobby featuring electronic turnstiles, badge scanners, and autonomous social-engineer avatars executing four deception pretexts grounded in Cialdini's influence principles (delivery courier with heavy parcels, hurried executive without a badge, telecom contractor with clipboard, and disgruntled former employee). A continuous 20 Hz spatial telemetry pipeline tracks employee line of sight to visitor credentials, interpersonal approach distance, decision latency, and policy adherence. In a randomized controlled evaluation ($N = 50$ enterprise employees across traditional didactic vs. interactive VR arms), the VR simulation slashed unauthorized tailgating breach rates from $48.5\%$ to $7.2\%$ (an $85.2\%$ breach risk reduction, $p < 0.001$, Cohen's $d = 2.88$). Concurrently, badge challenge compliance increased from $24.8\%$ to $88.6\%$ ($+63.8\%$ absolute gain, $p < 0.001$), while mean decision latency dropped from $11.8\text{ s}$ to $4.3\text{ s}$ ($-63.6\%$). Technoeconomic operational modeling indicates that the platform reclaims 798.5 institutional labor hours annually for a 500-employee enterprise, operates at a dimensionless cost parity ratio of $\kappa = 0.175$ relative to traditional training and incident remediation overhead, and amortizes deployment capital costs within 15.27 operating months.
+### The CyberQuest menu
 
----
+| Menu item | What it does |
+|---|---|
+| **1. Configure Project for Quest** | Sets Android / OpenXR / Meta settings needed for Quest |
+| **2. Build Office Scene** | Regenerates the whole office scene from code (run after changing code) |
+| **3. Build APK** | Builds the Quest app to `Builds/CyberQuest.apk` |
+| **4. Activate Meta Quest Build Profile** | Switches the project to the Meta Quest build profile |
+| **5. Play in Meta XR Simulator** | Plays the game normally in the simulator |
+| **6. Automated Playtest in Simulator** | Runs the scripted test playthroughs (the game plays itself, then stops) |
+| **7. Run EditMode Tests** | Runs the unit tests; results in `Builds/test_results.txt` |
 
-## Verified Foundational Literature (6 CrossRef DOIs)
+## First-time setup on a new machine
 
-| # | Citation Key | Full Canonical Title | Journal / Conference | Year | Verified DOI |
-|---|---|---|---|---|---|
-| 1 | `Workman2007` | Gaining Access with Social Engineering: An Empirical Study of the Threat | Information Systems Security | 2007 | [10.1080/10658980701788165](https://doi.org/10.1080/10658980701788165) |
-| 2 | `Heartfield2015` | A Taxonomy of Attacks and a Survey of Defence Mechanisms for Semantic Social Engineering Attacks | ACM Computing Surveys | 2015 | [10.1145/2835375](https://doi.org/10.1145/2835375) |
-| 3 | `Rehman2026` | Evaluating the impact of immersive virtual reality in cybersecurity education for user empowerment against cyber threats | Virtual Reality | 2026 | [10.1007/s10055-025-01309-8](https://doi.org/10.1007/s10055-025-01309-8) |
-| 4 | `Abril2025` | Exploring a novel approach to cybersecurity: the role of ecological simulations on cybersecurity risk behaviors | Virtual Reality | 2025 | [10.1007/s10055-025-01228-8](https://doi.org/10.1007/s10055-025-01228-8) |
-| 5 | `RamaseriChandra2024` | Cybersecurity threats in Virtual Reality Environments: A Literature Review | 2024 Cyber Awareness and Research Symposium (CARS) | 2024 | [10.1109/CARS61786.2024.10778838](https://doi.org/10.1109/CARS61786.2024.10778838) |
-| 6 | `Alnajim2023` | Exploring Cybersecurity Education and Training Techniques: A Comprehensive Review of Traditional, Virtual Reality, and Augmented Reality Approaches | Symmetry | 2023 | [10.3390/sym15122175](https://doi.org/10.3390/sym15122175) |
+1. **Install Unity 6000.6.6f1** (this exact version) through Unity Hub. When adding it, tick
+   **Android Build Support** together with **OpenJDK** and **Android SDK & NDK Tools**.
+2. **Clone** this repo and open the folder in Unity Hub (`Add > Add project from disk`).
+   The first open takes several minutes: Unity downloads the packages (including the Meta XR SDK)
+   and rebuilds the `Library/` folder, which is not stored in git.
+3. To play without a headset, install **[Meta XR Simulator](https://developers.meta.com/horizon/develop/unity/)**.
 
----
+## Play it
 
-## Student Engineering Team & Task Matrix
+1. `CyberQuest > 2. Build Office Scene`
+2. `CyberQuest > 5. Play in Meta XR Simulator`
+3. Stop playing with the Play button (top centre of Unity) or **Ctrl+P**.
 
-| Roll No | Student Name | Degree Programme | Technical Role | Assigned Git Branch |
-| :--- | :--- | :--- | :--- | :--- |
-| `B069` | **Samarth Pande** | B.Tech / MBA (Tech) | Physical Security Controls Lead | `feat/b069-physical-security-co` |
-| `B148` | **Ishan Choudhary** | B.Tech / MBA (Tech) | XR Systems Architect | `feat/b148-xr-systems-architect` |
-| `B155` | **Aarush Mishra** | B.Tech / MBA (Tech) | Breach Telemetry & Audit Specialist | `feat/b155-breach-telemetry-aud` |
-| `K031` | **Sachi Kumar** | B.Tech / MBA (Tech) | Security QA & Compliance Lead | `feat/k031-security-qa-complian` |
+Simulator keys: look = right-mouse drag or arrow keys · move = W A S D · press a button = **T** · grab = hold **U** ·
+teleport = hold **Y**, aim, release · turn = **G** / **J**. Turn on **Point & click** in the simulator's left panel so
+the controller ray follows your mouse.
 
----
+## Build for Meta Quest (Android)
 
+The build profiles are in the repo: `Assets/Settings/Build Profiles/Meta Quest.asset` (use this one) and
+`Android™.asset`. Which profile is *active* is saved per computer, so do step 1 once after cloning.
 
-### Student Engineering Commendation & Acknowledgments
-SVKM's NMIMS MPSTME conveys sincere appreciation and heartfelt gratitude to Samarth Pande (B069), Ishan Choudhary (B148), Aarush Mishra (B155), Sachi Kumar (K031) for their disciplined commitment, late-night debugging, and technical craftsmanship throughout Semester V. Your rigorous engineering inquiry and dedication to immersive XR environments exemplify the highest standards of undergraduate technical research.
+1. `File > Build Profiles`, select **Meta Quest**, click **Switch Profile**
+   (or simply `CyberQuest > 4. Activate Meta Quest Build Profile`).
+2. `CyberQuest > 1. Configure Project for Quest`
+3. `CyberQuest > 3. Build APK` – the app appears at `Builds/CyberQuest.apk` (not stored in git; about 1 GB).
+4. Install it on the headset with Meta Quest Developer Hub or `adb install Builds/CyberQuest.apk`
+   (the headset needs Developer Mode turned on).
 
-> *"Scientists discover the world that exists; engineers create the world that never was."*  
-> — **Theodore von Kármán**
+## Editing
 
-> *"There is no substitute for hard work. Genius is one percent inspiration and ninety-nine percent perspiration."*  
-> — **Thomas A. Edison**
+Everything in the office is generated by code:
 
----
+- Scene builder: `Assets/_Project/Scripts/Editor/OfficeSceneBuilder.cs`
+- Gameplay: `Assets/_Project/Scripts/` (`Core`, `Situations`, `UI`, `Props`, `Player`)
 
-## Core System Architecture & Egress Telemetry
+Change the code, then run `CyberQuest > 2. Build Office Scene` again. Don't hand-edit the scene file: it is
+overwritten every time the scene is rebuilt.
 
-The platform comprises four interconnected software modules:
-1. **Pretext Engine & Scenario State Machine (`Assets/Scripts/TailgatingBreachManager.cs`, `B069 - Samarth Pande`):** Coordinates penetration pretexts (courier, executive, technician), dialogue selection trees, turnstile lock/unlock relays, and timed decision gates.
-2. **Immersive XR Corporate Facility (`B148 - Ishan Choudhary`):** High-fidelity lobby environment in Unity 2022.3 LTS featuring glass security turnstiles, RFID card scanners, autonomous NPC avatars with Mecanim animation blend trees, and 3D spatialized voice audio prompts.
-3. **Spatial Telemetry & Gaze Core (`Assets/Scripts/PhysicalSecurityTelemetryLogger.cs`, `B155 - Aarush Mishra`):** 20 Hz continuous head orientation tracking, raycast credential inspection dwell time, interpersonal proximity measurement, and automated CSV logging to `telemetry/security_audit_real_trials.csv`.
-4. **Security QA, Compliance Scoring & Technoeconomics (`telemetry/security_audit_eval.py`, `K031 - Sachi Kumar`):** Multi-class confusion matrix formulation, ISO/IEC 27001 Control A.7 scoring, System Usability Scale (SUS) assessment, and enterprise labor reallocation modeling.
+## Not in the repo (on purpose)
 
-### Publication-Grade Figures (300 DPI)
-- `docs/figures/figure1_system_architecture.png`: Multi-tier system architecture diagram showing Pretext Engine, XR Facility, Telemetry Core, and Security Audit Analytics.
-- `docs/figures/figure2_kinematic_telemetry.png`: Trainee challenge decision latency trajectories across successive trials and correlation between credential gaze dwell and stand-off distance.
-- `docs/figures/figure3_comparative_performance.png`: Empirical results across 4 subplots (tailgating breach rate, badge challenge compliance rate, mean decision latency, and System Usability Scale).
-
----
-
----
-
-## Project Demonstration & Academic Showcase (LinkedIn)
-
-[![Watch Video Demonstration on LinkedIn](docs/figures/video_poster.png)](https://www.linkedin.com/)
-
-* **Video Demonstration:** [Watch 60-Second Walkthrough on LinkedIn](https://www.linkedin.com/) *(Click thumbnail above to open LinkedIn post)*
-* **Student Presenters:** **Samarth Pande** (B069), **Ishan Choudhary** (B148), **Aarush Mishra** (B155), **Sachi Kumar** (K031)
-* **Academic Institutional Tags:** SVKM's NMIMS MPSTME | Academic Directorate | Immersive VR/AR Technologies
-* **Submission Protocol:** Record a 60–90 second demonstration of your VR/AR interactive environment and telemetry. Publish on LinkedIn tagging MPSTME, Dean, and Course Faculty. Insert your live post URL in `docs/TEAM_ROSTER.json` under `"linkedin_url"`, and submit a pull request to update this project dossier and the cohort dashboard.
-
----
-
-## Empirical Benchmark & Technoeconomic Highlights
-- **Tailgating Breach Rate Reduction:** Plummets from $48.5 \pm 5.2\%$ (traditional didactic) to $7.2 \pm 1.8\%$ ($85.2\%$ risk reduction, $p < 0.001$, Cohen's $d = 2.88$).
-- **Badge Challenge Compliance:** Soars from $24.8\%$ to $88.6\%$ ($+63.8\%$ absolute gain in proactive verification).
-- **Mean Security Decision Latency:** Slashed from $11.8\text{ s}$ to $4.3\text{ s}$ ($-63.6\%$ latency reduction).
-- **Credential Gaze Dwell Time:** Increases by $+322.2\%$ ($0.9\text{ s} \to 3.8\text{ s}$), demonstrating thorough badge inspection.
-- **Stand-Off Safe Distance:** Expands from $0.8\text{ m}$ to $1.9\text{ m}$, establishing an optimal interpersonal buffer against physical aggression.
-- **System Usability Scale (SUS):** Reached $87.4 \pm 3.9$ (Grade A, Excellent).
-- **Institutional Labor Hours Reclaimed:** 798.5 hours saved annually across 500 enterprise corporate employees.
-- **Dimensionless Cost Parity Ratio:** $\kappa = 0.175$, establishing an $82.5\%$ reduction in recurrent training and breach investigation expenditure.
-- **Capital Payback Horizon:** 15.27 operating months to fully amortize simulation hardware and development costs.
+`Library/` (Unity cache, rebuilt automatically), `Builds/` (APKs and test output), `Logs/`, `Temp/`, `UserSettings/`.

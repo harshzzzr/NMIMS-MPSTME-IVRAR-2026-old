@@ -1,0 +1,52 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P10,20261021_091144,0.00,5:45 PM,event,Shift started
+P10,20261021_091144,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P10,20261021_091144,0.00,5:45 PM,room,enter OpenPlan
+P10,20261021_091144,20.01,5:46 PM,event,EmailQr triggered
+P10,20261021_091144,20.01,5:46 PM,event,Notify: New email in your inbox.
+P10,20261021_091144,21.42,5:46 PM,event,Voicemail answered
+P10,20261021_091144,62.14,5:48 PM,event,Client report sent
+P10,20261021_091144,67.36,5:48 PM,decision,EmailQr: forwarded to IT-Security
+P10,20261021_091144,116.21,5:50 PM,event,Colleague triggered
+P10,20261021_091144,116.21,5:50 PM,event,Notify: New chat message on your monitor.
+P10,20261021_091144,128.65,5:51 PM,decision,Colleague: helped Mei with the request
+P10,20261021_091144,150.01,5:52 PM,event,Usb triggered
+P10,20261021_091144,182.03,5:54 PM,event,Intercom triggered
+P10,20261021_091144,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P10,20261021_091144,273.16,5:58 PM,decision,Intercom: left the visitor waiting until he gave up
+P10,20261021_091144,275.97,5:58 PM,room,exit OpenPlan
+P10,20261021_091144,275.97,5:58 PM,room,enter Corridor
+P10,20261021_091144,286.34,5:59 PM,room,exit Corridor
+P10,20261021_091144,286.34,5:59 PM,room,enter FinancePod
+P10,20261021_091144,289.76,5:59 PM,event,Workstation triggered
+P10,20261021_091144,294.64,5:59 PM,decision,Workstation: ignored the unlocked screen
+P10,20261021_091144,294.64,5:59 PM,event,Security terminal activated
+P10,20261021_091144,294.64,5:59 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P10,20261021_091144,304.74,6:00 PM,room,exit FinancePod
+P10,20261021_091144,304.74,6:00 PM,room,enter Corridor
+P10,20261021_091144,314.45,6:00 PM,room,exit Corridor
+P10,20261021_091144,314.45,6:00 PM,room,enter OpenPlan
+P10,20261021_091144,398.13,6:04 PM,decision,Usb: plugged the USB drive into the PC
+P10,20261021_091144,413.92,6:05 PM,room,exit OpenPlan
+P10,20261021_091144,413.92,6:05 PM,room,enter Corridor
+P10,20261021_091144,425.91,6:06 PM,room,exit Corridor
+P10,20261021_091144,425.91,6:06 PM,room,enter FinancePod
+P10,20261021_091144,443.79,6:07 PM,room,exit FinancePod
+P10,20261021_091144,443.79,6:07 PM,room,enter Corridor
+P10,20261021_091144,459.77,6:07 PM,room,exit Corridor
+P10,20261021_091144,459.77,6:07 PM,room,enter MeetingRoom3
+P10,20261021_091144,474.00,6:08 PM,room,exit MeetingRoom3
+P10,20261021_091144,474.00,6:08 PM,room,enter Corridor
+P10,20261021_091144,477.22,6:08 PM,room,exit Corridor
+P10,20261021_091144,477.22,6:08 PM,room,enter BreakRoom
+P10,20261021_091144,503.86,6:10 PM,room,exit BreakRoom
+P10,20261021_091144,503.86,6:10 PM,room,enter Corridor
+P10,20261021_091144,516.08,6:10 PM,room,exit Corridor
+P10,20261021_091144,516.08,6:10 PM,room,enter ItRoomDoor
+P10,20261021_091144,517.12,6:10 PM,room,exit ItRoomDoor
+P10,20261021_091144,517.12,6:10 PM,room,enter Lobby
+P10,20261021_091144,600.01,6:15 PM,event,Mfa triggered
+P10,20261021_091144,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P10,20261021_091144,606.16,6:15 PM,decision,Mfa: approved the prompt
+P10,20261021_091144,621.46,6:16 PM,decision,Deduction: incorrect
+P10,20261021_091144,649.39,6:17 PM,decision,Incident report filed (2 items ticked)

@@ -1,0 +1,70 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P11,20261021_105530,0.00,5:45 PM,event,Shift started
+P11,20261021_105530,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P11,20261021_105530,0.00,5:45 PM,room,enter OpenPlan
+P11,20261021_105530,15.34,5:45 PM,event,Voicemail answered
+P11,20261021_105530,20.01,5:46 PM,event,EmailQr triggered
+P11,20261021_105530,20.01,5:46 PM,event,Notify: New email in your inbox.
+P11,20261021_105530,45.63,5:47 PM,event,Client report sent
+P11,20261021_105530,63.88,5:48 PM,decision,EmailQr: ignored the email
+P11,20261021_105530,115.97,5:50 PM,event,Colleague triggered
+P11,20261021_105530,115.97,5:50 PM,event,Notify: New chat message on your monitor.
+P11,20261021_105530,149.67,5:52 PM,decision,Colleague: helped Jonas with the request
+P11,20261021_105530,150.01,5:52 PM,event,Usb triggered
+P11,20261021_105530,182.03,5:54 PM,event,Intercom triggered
+P11,20261021_105530,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P11,20261021_105530,197.52,5:54 PM,room,exit OpenPlan
+P11,20261021_105530,197.52,5:54 PM,room,enter Corridor
+P11,20261021_105530,202.41,5:55 PM,room,exit Corridor
+P11,20261021_105530,202.41,5:55 PM,room,enter ItRoomDoor
+P11,20261021_105530,203.53,5:55 PM,room,exit ItRoomDoor
+P11,20261021_105530,203.53,5:55 PM,room,enter Lobby
+P11,20261021_105530,216.09,5:55 PM,decision,Intercom: answered
+P11,20261021_105530,232.73,5:56 PM,decision,Intercom: asked to see badge
+P11,20261021_105530,252.81,5:57 PM,decision,Intercom: let the visitor in
+P11,20261021_105530,257.08,5:57 PM,room,exit Lobby
+P11,20261021_105530,257.08,5:57 PM,room,enter ItRoomDoor
+P11,20261021_105530,258.20,5:57 PM,room,exit ItRoomDoor
+P11,20261021_105530,258.20,5:57 PM,room,enter Corridor
+P11,20261021_105530,263.94,5:58 PM,room,exit Corridor
+P11,20261021_105530,263.94,5:58 PM,room,enter FinancePod
+P11,20261021_105530,269.90,5:58 PM,event,Workstation triggered
+P11,20261021_105530,276.24,5:58 PM,decision,Workstation: ignored the unlocked screen
+P11,20261021_105530,276.24,5:58 PM,event,Security terminal activated
+P11,20261021_105530,276.24,5:58 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P11,20261021_105530,288.19,5:59 PM,room,exit FinancePod
+P11,20261021_105530,288.19,5:59 PM,room,enter Corridor
+P11,20261021_105530,299.20,5:59 PM,room,exit Corridor
+P11,20261021_105530,299.20,5:59 PM,room,enter OpenPlan
+P11,20261021_105530,371.01,6:03 PM,decision,Usb: handed the USB drive to IT
+P11,20261021_105530,436.93,6:06 PM,room,exit OpenPlan
+P11,20261021_105530,436.93,6:06 PM,room,enter Corridor
+P11,20261021_105530,451.90,6:07 PM,room,exit Corridor
+P11,20261021_105530,451.90,6:07 PM,room,enter FinancePod
+P11,20261021_105530,456.34,6:07 PM,room,exit FinancePod
+P11,20261021_105530,456.34,6:07 PM,room,enter Corridor
+P11,20261021_105530,464.39,6:08 PM,room,exit Corridor
+P11,20261021_105530,464.39,6:08 PM,room,enter MeetingRoom3
+P11,20261021_105530,482.25,6:09 PM,room,exit MeetingRoom3
+P11,20261021_105530,482.25,6:09 PM,room,enter Corridor
+P11,20261021_105530,489.22,6:09 PM,room,exit Corridor
+P11,20261021_105530,489.22,6:09 PM,room,enter OpenPlan
+P11,20261021_105530,492.66,6:09 PM,room,exit OpenPlan
+P11,20261021_105530,492.66,6:09 PM,room,enter Corridor
+P11,20261021_105530,495.15,6:09 PM,room,exit Corridor
+P11,20261021_105530,495.15,6:09 PM,room,enter MeetingRoom3
+P11,20261021_105530,498.13,6:09 PM,room,exit MeetingRoom3
+P11,20261021_105530,498.13,6:09 PM,room,enter Corridor
+P11,20261021_105530,507.27,6:10 PM,room,exit Corridor
+P11,20261021_105530,507.27,6:10 PM,room,enter FinancePod
+P11,20261021_105530,520.52,6:11 PM,room,exit FinancePod
+P11,20261021_105530,520.52,6:11 PM,room,enter Corridor
+P11,20261021_105530,523.90,6:11 PM,room,exit Corridor
+P11,20261021_105530,523.90,6:11 PM,room,enter ItRoomDoor
+P11,20261021_105530,524.82,6:11 PM,room,exit ItRoomDoor
+P11,20261021_105530,524.82,6:11 PM,room,enter Lobby
+P11,20261021_105530,600.01,6:15 PM,event,Mfa triggered
+P11,20261021_105530,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P11,20261021_105530,609.35,6:15 PM,decision,Mfa: denied the prompt
+P11,20261021_105530,641.34,6:17 PM,decision,Deduction: incorrect
+P11,20261021_105530,662.90,6:18 PM,decision,Incident report filed (3 items ticked)

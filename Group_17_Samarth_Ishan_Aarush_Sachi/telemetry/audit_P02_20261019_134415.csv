@@ -1,0 +1,83 @@
+participant_id,session_id,real_seconds,game_time,kind,detail
+P02,20261019_134415,0.00,5:45 PM,event,Shift started
+P02,20261019_134415,0.00,5:45 PM,event,Notify: Your desk phone is ringing.
+P02,20261019_134415,0.00,5:45 PM,room,enter OpenPlan
+P02,20261019_134415,18.42,5:45 PM,event,Voicemail answered
+P02,20261019_134415,20.01,5:46 PM,event,EmailQr triggered
+P02,20261019_134415,20.01,5:46 PM,event,Notify: New email in your inbox.
+P02,20261019_134415,53.44,5:47 PM,event,Client report sent
+P02,20261019_134415,66.06,5:48 PM,decision,EmailQr: clicked the link
+P02,20261019_134415,113.55,5:50 PM,event,Colleague triggered
+P02,20261019_134415,113.55,5:50 PM,event,Notify: New chat message on your monitor.
+P02,20261019_134415,138.45,5:51 PM,decision,Colleague: asked Elena to verify by phone
+P02,20261019_134415,150.01,5:52 PM,event,Usb triggered
+P02,20261019_134415,182.03,5:54 PM,event,Intercom triggered
+P02,20261019_134415,182.03,5:54 PM,event,Notify: Someone is buzzing the main door (lobby).
+P02,20261019_134415,223.62,5:56 PM,room,exit OpenPlan
+P02,20261019_134415,223.62,5:56 PM,room,enter Corridor
+P02,20261019_134415,239.57,5:56 PM,room,exit Corridor
+P02,20261019_134415,239.57,5:56 PM,room,enter FinancePod
+P02,20261019_134415,241.73,5:57 PM,event,Workstation triggered
+P02,20261019_134415,244.92,5:57 PM,decision,Workstation: ignored the unlocked screen
+P02,20261019_134415,244.92,5:57 PM,event,Security terminal activated
+P02,20261019_134415,244.92,5:57 PM,event,Notify: The security terminal in the lobby is ready. Check out there when you're done.
+P02,20261019_134415,259.76,5:57 PM,room,exit FinancePod
+P02,20261019_134415,259.76,5:57 PM,room,enter Corridor
+P02,20261019_134415,262.53,5:58 PM,room,exit Corridor
+P02,20261019_134415,262.53,5:58 PM,room,enter OpenPlan
+P02,20261019_134415,264.55,5:58 PM,decision,Intercom: left the visitor waiting until he gave up
+P02,20261019_134415,330.50,6:01 PM,decision,Usb: left the USB drive where it was
+P02,20261019_134415,361.22,6:03 PM,room,exit OpenPlan
+P02,20261019_134415,361.22,6:03 PM,room,enter Corridor
+P02,20261019_134415,363.02,6:03 PM,room,exit Corridor
+P02,20261019_134415,363.02,6:03 PM,room,enter BreakRoom
+P02,20261019_134415,376.04,6:03 PM,room,exit BreakRoom
+P02,20261019_134415,376.04,6:03 PM,room,enter Corridor
+P02,20261019_134415,381.19,6:04 PM,room,exit Corridor
+P02,20261019_134415,381.19,6:04 PM,room,enter OpenPlan
+P02,20261019_134415,397.31,6:04 PM,room,exit OpenPlan
+P02,20261019_134415,397.31,6:04 PM,room,enter Corridor
+P02,20261019_134415,410.11,6:05 PM,room,exit Corridor
+P02,20261019_134415,410.11,6:05 PM,room,enter MeetingRoom3
+P02,20261019_134415,426.72,6:06 PM,room,exit MeetingRoom3
+P02,20261019_134415,426.72,6:06 PM,room,enter Corridor
+P02,20261019_134415,427.96,6:06 PM,room,exit Corridor
+P02,20261019_134415,427.96,6:06 PM,room,enter OpenPlan
+P02,20261019_134415,429.10,6:06 PM,room,exit OpenPlan
+P02,20261019_134415,429.10,6:06 PM,room,enter Corridor
+P02,20261019_134415,430.28,6:06 PM,room,exit Corridor
+P02,20261019_134415,430.28,6:06 PM,room,enter BreakRoom
+P02,20261019_134415,435.53,6:06 PM,room,exit BreakRoom
+P02,20261019_134415,435.53,6:06 PM,room,enter Corridor
+P02,20261019_134415,448.24,6:07 PM,room,exit Corridor
+P02,20261019_134415,448.24,6:07 PM,room,enter MeetingRoom3
+P02,20261019_134415,452.63,6:07 PM,room,exit MeetingRoom3
+P02,20261019_134415,452.63,6:07 PM,room,enter Corridor
+P02,20261019_134415,460.29,6:08 PM,room,exit Corridor
+P02,20261019_134415,460.29,6:08 PM,room,enter OpenPlan
+P02,20261019_134415,476.07,6:08 PM,room,exit OpenPlan
+P02,20261019_134415,476.07,6:08 PM,room,enter Corridor
+P02,20261019_134415,482.82,6:09 PM,room,exit Corridor
+P02,20261019_134415,482.82,6:09 PM,room,enter FinancePod
+P02,20261019_134415,492.91,6:09 PM,room,exit FinancePod
+P02,20261019_134415,492.91,6:09 PM,room,enter Corridor
+P02,20261019_134415,494.95,6:09 PM,room,exit Corridor
+P02,20261019_134415,494.95,6:09 PM,room,enter BreakRoom
+P02,20261019_134415,504.31,6:10 PM,room,exit BreakRoom
+P02,20261019_134415,504.31,6:10 PM,room,enter Corridor
+P02,20261019_134415,506.60,6:10 PM,room,exit Corridor
+P02,20261019_134415,506.60,6:10 PM,room,enter OpenPlan
+P02,20261019_134415,518.28,6:10 PM,room,exit OpenPlan
+P02,20261019_134415,518.28,6:10 PM,room,enter Corridor
+P02,20261019_134415,519.96,6:10 PM,room,exit Corridor
+P02,20261019_134415,519.96,6:10 PM,room,enter FinancePod
+P02,20261019_134415,523.69,6:11 PM,room,exit FinancePod
+P02,20261019_134415,523.69,6:11 PM,room,enter Corridor
+P02,20261019_134415,530.68,6:11 PM,room,exit Corridor
+P02,20261019_134415,530.68,6:11 PM,room,enter ItRoomDoor
+P02,20261019_134415,531.60,6:11 PM,room,exit ItRoomDoor
+P02,20261019_134415,531.60,6:11 PM,room,enter Lobby
+P02,20261019_134415,600.01,6:15 PM,event,Mfa triggered
+P02,20261019_134415,600.01,6:15 PM,event,Notify: Your phone is buzzing.
+P02,20261019_134415,616.39,6:15 PM,decision,Deduction: incorrect
+P02,20261019_134415,636.86,6:16 PM,decision,Incident report filed (4 items ticked)

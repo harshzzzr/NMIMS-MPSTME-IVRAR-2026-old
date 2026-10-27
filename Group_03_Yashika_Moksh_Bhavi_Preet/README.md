@@ -1,4 +1,4 @@
-# IVRAR Group 03: Collaborative Multi-User VR Emergency Evacuation Simulator
+# IVRAR Group 03: Multi-User VR Emergency Evacuation Simulator
 **Course:** Introduction to Virtual Reality & Augmented Reality (IVRAR - Course Code: 702COI002)  
 **Academic Term:** Academic Year 2026–2027 | Semester V  
 **Institution:** SVKM's NMIMS MPSTME, Mumbai  
