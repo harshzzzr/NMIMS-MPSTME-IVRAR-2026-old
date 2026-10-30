@@ -5,6 +5,7 @@ Evaluates 6 subjective subscales: Mental Demand, Physical Demand,
 Temporal Demand, Performance, Effort, and Frustration.
 """
 import math
+import csv
 
 def calculate_tlx(subscales):
     """
@@ -12,25 +13,33 @@ def calculate_tlx(subscales):
     Each value between 0 and 100.
     """
     keys = ['mental', 'physical', 'temporal', 'performance', 'effort', 'frustration']
-    raw_tlx = sum(subscales[k] for k in keys) / len(keys)
+    if set(keys) - set(subscales):
+        raise ValueError("All six NASA-TLX subscales are required.")
+    if any(float(subscales[k]) < 0 or float(subscales[k]) > 100 for k in keys):
+        raise ValueError("NASA-TLX subscales must be in the 0–100 range.")
+    raw_tlx = sum(float(subscales[k]) for k in keys) / len(keys)
     return raw_tlx
 
-def evaluate_tlx_comparison():
-    # Baseline 2D / Physical Training vs Proposed Immersive VR Intervention
-    baseline = {'mental': 68.5, 'physical': 45.0, 'temporal': 62.0, 'performance': 54.0, 'effort': 71.0, 'frustration': 58.0}
-    vr_intervention = {'mental': 42.0, 'physical': 38.0, 'temporal': 35.0, 'performance': 22.0, 'effort': 44.0, 'frustration': 24.0}
-    
-    tlx_base = calculate_tlx(baseline)
-    tlx_vr = calculate_tlx(vr_intervention)
-    reduction = ((tlx_base - tlx_vr) / tlx_base) * 100.0
-    
-    print("=" * 65)
-    print("NASA TASK LOAD INDEX (NASA-TLX) WORKLOAD COMPARISON")
-    print("=" * 65)
-    print(f"Traditional Baseline Raw TLX:    {tlx_base:.2f} / 100 (High Cognitive Load)")
-    print(f"VR Spatial Intervention Raw TLX: {tlx_vr:.2f} / 100 (Optimized Cognitive Flow)")
-    print(f"Cognitive Workload Compression:  -{reduction:.1f}% reduction")
-    print("=" * 65)
+def evaluate_tlx_comparison(csv_file=None):
+    if not csv_file:
+        print("No empirical NASA-TLX file supplied. No participant scores are reported.")
+        return None
+    names = ['mental', 'physical', 'temporal', 'performance', 'effort', 'frustration']
+    with open(csv_file, newline='', encoding='utf-8-sig') as handle:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames or 'data_status' not in reader.fieldnames:
+            raise ValueError('NASA-TLX CSV must contain data_status=empirical for every response row.')
+        if not set(names).issubset(reader.fieldnames):
+            raise ValueError('NASA-TLX CSV requires mental, physical, temporal, performance, effort, and frustration columns.')
+        rows = list(reader)
+    if not rows or any(row['data_status'].strip().lower() != 'empirical' for row in rows):
+        raise ValueError('No empirical NASA-TLX rows found, or the file includes non-empirical rows.')
+    values = [calculate_tlx({name: float(row[name]) for name in names}) for row in rows]
+    mean = sum(values) / len(values)
+    variance = sum((value - mean) ** 2 for value in values) / max(1, len(values) - 1)
+    print(f'Empirical NASA-TLX raw mean: {mean:.2f} / 100 (N={len(values)})')
+    print(f'Sample SD: {math.sqrt(variance):.2f}')
+    return {'n': len(values), 'mean': mean, 'sd': math.sqrt(variance)}
 
 if __name__ == "__main__":
     evaluate_tlx_comparison()

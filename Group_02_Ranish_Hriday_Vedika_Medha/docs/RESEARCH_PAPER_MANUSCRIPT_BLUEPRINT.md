@@ -7,7 +7,7 @@
 ---
 
 ## Abstract
-Defensive security personnel must make split-second threat engagement decisions in low-visibility nighttime environments while subjected to acute sensory stressors. Conventional live-fire training is constrained by high consumable ammunition costs, facility safety boundaries, and limited stress replication. This paper presents an immersive virtual reality (VR) training framework developed in Unity OpenXR that combines mesopic low-lux illumination ($0.5-5.0\text{ lux}$), dynamic volumetric fog, and multi-modal sensory stressors (85-95 dB acoustic startles and peripheral glare strobes) with automated Signal Detection Theory ($d', \beta$) telemetry. Evaluated across 50 empirical simulation trials comparing untrained control vs stress-inoculated cohorts, the proposed framework demonstrates a 35.1% reduction in reaction latency ($480\text{ ms}$ vs $740\text{ ms}$, $p < 0.001$), an improvement in threat discrimination sensitivity from $d' = 1.24$ to $d' = 2.82$, and a 78.6% decline in civilian false alarm engagements. An integrated techno-managerial operational economics model establishes an operational cost parity ratio of $\kappa = 0.042$ (95.8% operational savings over live shoot-houses) and capital payback within 10.9 operating months.
+This paper specifies an immersive OpenXR simulation and an evaluation pipeline for studying target prioritization and reaction latency under simulated low-visibility conditions. The planned system combines configurable mesopic lighting, fog, bounded sensory cues, target classification, event telemetry, and standardized workload and situational-awareness questionnaires. The current repository contains starter scaffolding and simulated reference data; it does not yet establish participant outcomes, performance gains, or operational cost parity. Empirical evaluation, Unity scene integration, and cost-input validation remain pending. Results will be reported only after the protocol is run with consenting participants and the collected data are analyzed.
 
 **Keywords:** Virtual reality, defensive security training, sensory stress inoculation, signal detection theory, reaction latency, low-visibility mesopic vision, techno-managerial operational analysis.
 
@@ -16,14 +16,14 @@ Defensive security personnel must make split-second threat engagement decisions 
 ## I. Introduction
 Defensive security personnel, law enforcement officers, and rapid response units operate in volatile, uncertain environments where threat identification errors carry catastrophic consequences. Under nighttime conditions, reduced visual acuity and sudden sensory startles trigger acute sympathetic arousal, resulting in perceptual narrowing, elevated motor tremor, and premature weapon discharges against non-hostile civilians.
 
-This research investigates the interrogative research question:
+This research investigates the question:
 > "How can an immersive VR sensory-stress simulation improve target prioritization and reaction latency for defensive security trainees under simulated low-visibility nighttime conditions?"
 
 The primary contributions of this paper are:
-1. **Low-Visibility Immersive Environment:** A photorealistic nighttime simulation incorporating volumetric fog and dynamic flashlight cone attenuation ($E = (I_0 \cos\theta)/r^2$).
-2. **Sensory-Stress Inoculation Pipeline:** Procedural injection of high-intensity acoustic gunfire startles (85-95 dB) and peripheral visual strobes during target presentation.
-3. **Signal Detection Theory Telemetry:** Automated real-time logging of millisecond reaction latency and computation of $d'$ sensitivity and $\beta$ response criteria.
-4. **Techno-Managerial Systems Analysis:** A dimensionless model demonstrating significant live-fire ammunition replacement and accelerated training throughput.
+1. A low-visibility scene specification with configurable illumination, fog approximation, and flashlight attenuation.
+2. A bounded sensory-cue design whose acoustic output must be calibrated on target hardware before any sound-pressure claim is made.
+3. A telemetry design for event latency, target classification, and Signal Detection Theory metrics.
+4. An evaluation plan for human factors and operating-cost assumptions.
 
 ---
 
@@ -64,17 +64,14 @@ $$\tau_{\text{payback}} = \frac{I_{\text{capex}}}{\Delta C_{\text{annual}}} = 10
 ---
 
 ## V. Experimental Evaluation and Results
-Evaluated across $N = 50$ randomized simulation trials (`telemetry/reaction_latency_trial_log.csv`), publication figures were generated at 300 DPI (`telemetry/sensory_stress_defense_roi.py`):
-* **Figure 1:** System architecture and sensory stress simulation pipeline (`docs/figures/figure1_system_architecture.png`).
-* **Figure 2:** Empirical reaction latency vs lux and Signal Detection ROC curves ($d' = 2.82$ vs $1.24$) (`docs/figures/figure2_kinematic_telemetry.png`).
-* **Figure 3:** NASA-TLX cognitive workload subscale comparison and cost parity amortization (`docs/figures/figure3_comparative_performance.png`).
+**Status: empirical study pending.** The files prefixed `SIMULATED_` and any generated benchmark records are demonstration fixtures, not participant evidence. The checked-in trial log must be audited against collection provenance before it is described as empirical. No participant count, reaction-latency effect, false-alarm reduction, NASA-TLX score, SAGAT score, SUS score, statistical significance, or confidence interval is asserted here.
 
-Paired Student's t-tests confirmed statistically significant reductions in reaction latency ($t(48) = 14.82, p < 0.001$) and cognitive workload ($t(48) = 11.24, p < 0.001$).
+The preregistered analysis should report participant-level paired condition means, sample size and missingness, paired t statistic, degrees of freedom, two-sided p value, confidence interval, and paired Cohen's $d_z$. SDT rates will be calculated from observed hit, miss, false-alarm, and correct-rejection counts using a stated log-linear correction. Report hardware, frame rate, condition order, exclusion rules, adverse-event monitoring, and questionnaire timing. Figures should be generated from a provenance-labeled empirical input after data collection; existing synthetic figures are illustrative only.
 
 ---
 
 ## VI. Conclusion
-This paper designed and validated an immersive VR sensory-stress defensive training simulator. By coupling low-visibility mesopic illumination with dynamic acoustic startles and Signal Detection Theory telemetry, the framework significantly sharpens trainee reaction speed and threat discrimination accuracy while eliminating ammunition costs. Future work will integrate eye-tracking gaze analysis and biometric heart-rate variability biofeedback.
+The repository defines an implementation and evaluation direction for an OpenXR low-visibility target-prioritization simulation. It does not yet demonstrate improved reaction speed, threat discrimination, safety, or cost parity. The next steps are to complete and integrate the Unity scene, calibrate sensory output on the intended headset, conduct the approved non-clinical participant protocol, and analyze only verified empirical records. Operational substitution and payback claims require documented, comparable cost inputs.
 
 ---
 

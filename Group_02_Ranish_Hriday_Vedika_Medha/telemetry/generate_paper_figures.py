@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 group_dir = os.path.dirname(base_dir)
-docs_dir = os.path.join(group_dir, 'docs')
-figures_dir = os.path.join(docs_dir, 'figures')
+# Never put synthetic figures in the publication figure directory.
+figures_dir = os.path.join(base_dir, 'SIMULATED_figures')
 os.makedirs(figures_dir, exist_ok=True)
 
-# 1. Generate empirical benchmark dataset (N = 50 trials)
+# 1. Generate a synthetic demonstration fixture (not participant data)
 np.random.seed(42)
 n_trials = 50
 csv_path = os.path.join(base_dir, 'SIMULATED_security_training_benchmark.csv')
@@ -133,7 +133,8 @@ for x1, y1, x2, y2 in arrows:
 ax1.set_title('Figure 1: IVRAR Group 02 - Immersive Sensory-Stress Training & Telemetry Architecture',
               fontsize=11, fontweight='bold', pad=12)
 fig1.tight_layout()
-fig1_path = os.path.join(figures_dir, 'figure1_system_architecture.png')
+fig1_path = os.path.join(figures_dir, 'SIMULATED_figure1_system_architecture.png')
+fig1.text(0.5, 0.015, 'SIMULATED / ILLUSTRATIVE OUTPUT — NOT PARTICIPANT DATA', ha='center', color='darkred', fontsize=8)
 fig1.savefig(fig1_path, dpi=300)
 plt.close(fig1)
 print(f'[SUCCESS] Generated Figure 1: {fig1_path}')
@@ -173,9 +174,10 @@ ax2b.set_title('(b) Signal Detection ROC & Threat Sensitivity', fontsize=10, fon
 ax2b.grid(True, linestyle='--', alpha=0.6)
 ax2b.legend(loc='lower right', frameon=True, facecolor='white')
 
-fig2.suptitle('Figure 2: Empirical Telemetry & Threat Discrimination Performance', fontsize=12, fontweight='bold')
+fig2.suptitle('SIMULATED EXAMPLE — NOT EMPIRICAL DATA', fontsize=12, fontweight='bold', color='darkred')
 fig2.tight_layout()
-fig2_path = os.path.join(figures_dir, 'figure2_kinematic_telemetry.png')
+fig2_path = os.path.join(figures_dir, 'SIMULATED_figure2_kinematic_telemetry.png')
+fig2.text(0.5, 0.015, 'SIMULATED / ILLUSTRATIVE OUTPUT — NOT PARTICIPANT DATA', ha='center', color='darkred', fontsize=8)
 fig2.savefig(fig2_path, dpi=300)
 plt.close(fig2)
 print(f'[SUCCESS] Generated Figure 2: {fig2_path}')
@@ -219,7 +221,8 @@ ax3b.legend(loc='upper right')
 
 fig3.suptitle('Figure 3: Comparative Human Factors & Technoeconomic Benchmarks', fontsize=12, fontweight='bold')
 fig3.tight_layout()
-fig3_path = os.path.join(figures_dir, 'figure3_comparative_performance.png')
+fig3_path = os.path.join(figures_dir, 'SIMULATED_figure3_comparative_performance.png')
+fig3.text(0.5, 0.015, 'SIMULATED / ILLUSTRATIVE OUTPUT — NOT PARTICIPANT DATA', ha='center', color='darkred', fontsize=8)
 fig3.savefig(fig3_path, dpi=300)
 plt.close(fig3)
 print(f'[SUCCESS] Generated Figure 3: {fig3_path}')

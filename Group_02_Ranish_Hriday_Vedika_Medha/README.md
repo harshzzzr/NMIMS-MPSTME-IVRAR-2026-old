@@ -13,9 +13,9 @@
 ### Core Engineering Focus
 * **Interactive VR Environment:** Unity OpenXR tactical breach environment simulating nighttime mesopic illumination ($0.5-5.0\text{ lux}$) and volumetric fog (`Assets/index.html` and `Assets/Scripts/`).
 * **Sensory-Stress Inoculation:** High-intensity acoustic startle cues (85-95 dB) and peripheral strobe glares during critical engagement windows (`Assets/Scripts/SensoryStressTargetManager.cs`).
-* **Signal Detection Telemetry:** Continuous 90 Hz logging of millisecond reaction times, hit rates, false alarm rates, and Signal Detection Theory metrics ($d', \beta$) (`Assets/Scripts/ReactionLatencyTelemetryLogger.cs`).
-* **Techno-Managerial Systems Evaluation:** Dimensionless operational model analyzing live-fire ammunition replacement and shoot-house facility rental substitution (`telemetry/sensory_stress_defense_roi.py`).
-* **Human Factors & Cognitive Workload:** Standardized assessments via NASA-TLX, Kennedy SSQ cybersickness, and Situational Awareness Global Assessment Technique (SAGAT) (`telemetry/`).
+* **Signal Detection Telemetry:** Target-decision event logging with configurable head-motion proxy sampling and observed-count Signal Detection Theory metrics ($d', \beta$) (`Assets/Scripts/ReactionLatencyTelemetryLogger.cs`).
+* **Techno-Managerial Systems Evaluation:** Input-driven operating-cost and payback calculations requiring documented cost inputs (`telemetry/sensory_stress_defense_roi.py`).
+* **Human Factors & Cognitive Workload:** A post-trial NASA-TLX/SAGAT-style UI controller and assessment export, with existing NASA-TLX, Kennedy SSQ, and SUS scoring tools (`Assets/Scripts/PostTrialAssessmentController.cs`, `telemetry/`).
 
 ---
 
@@ -32,7 +32,7 @@
 | `N024` | `70472400145` | **Ranish Devadiga** | MBA (Tech) (Computer) | Lead XR Systems Architect | `feat/n024-xr-systems-architect` | Unity OpenXR nighttime mesopic rendering, volumetric low-light fog shaders, dynamic flashlight cone inverse-square falloff, peripheral strobe startle cues, and 6-DoF defensive weapon rig. |
 | `N042` | `70472400224` | **Hriday Jain** | MBA (Tech) (Computer) | Human Factors & Usability Engineer | `feat/n042-human-factors-usabil` | Multi-dimensional NASA-TLX cognitive workload assessment, Situational Awareness Global Assessment Technique (SAGAT), Kennedy SSQ cybersickness monitoring, and stress inoculation training (SIT) efficacy. |
 | `N047` | `70472400031` | **Vedika Kaki** | MBA (Tech) (Computer) | Spatial Telemetry & Data Lead | `feat/n047-spatial-telemetry-da` | Signal Detection Theory (SDT) sensitivity index (d') and decision criterion (beta), shoot/don't-shoot millisecond reaction latency logging, false alarm error rate reduction, and paired t-test hypothesis testing. |
-| `N062` | `70472400154` | **Medha Mishra** | MBA (Tech) (Computer) | Techno-Managerial Product Manager | `feat/n062-technoeconomic-produ` | Defensive training operational economics, live-fire ammunition consumption substitution (350 rounds/trainee), physical shoot-house facility rental replacement, operational cost parity ($\kappa = 0.042$), and capital payback horizon (10.9 months). |
+| `N062` | `70472400154` | **Medha Mishra** | MBA (Tech) (Computer) | Techno-Managerial Product Manager | `feat/n062-technoeconomic-produ` | Validate ammunition/facility substitution assumptions and compute cost parity and payback only from documented cost inputs. |
 
 ---
 
@@ -103,7 +103,7 @@ For the exhaustive literature analysis, mathematical derivations, and viva defen
 |       `-- figure3_comparative_performance.png        <- 300 DPI comparative benchmark visualization
 `-- telemetry/
     |-- .gitkeep
-    |-- reaction_latency_trial_log.csv                 <- Empirical benchmark trial dataset (N = 50 runs)
+    |-- reaction_latency_trial_log.csv                 <- Starter log; provenance must be verified before empirical use
     |-- sensory_stress_defense_roi.py                  <- Techno-managerial operational economics model
     |-- kennedy_ssq_calculator.py                      <- Simulator sickness questionnaire evaluation tool
     |-- nasa_tlx_calculator.py                         <- Cognitive workload assessment tool
@@ -124,9 +124,13 @@ To ensure academic rigor and authentic student learning, this repository enforce
   * Dimensionless techno-managerial operational framework (`telemetry/sensory_stress_defense_roi.py`).
 * **Student Technical Deliverables (Required for Evaluation):**
   * Implement and calibrate the dynamic sensory stressor envelope and Signal Detection Theory algorithms in `Assets/Scripts/SensoryStressTargetManager.cs` and `Assets/Scripts/ReactionLatencyTelemetryLogger.cs` (completing all `# TODO [Student Roll / Name]` blocks).
-  * Execute simulation trials across baseline vs stress-inoculated training cohorts to collect empirical data in `telemetry/reaction_latency_trial_log.csv`.
+* Execute approved participant trials across study conditions to collect empirical data. Synthetic fixtures and the starter trial log are not evidence of participant outcomes.
   * Run `telemetry/sensory_stress_defense_roi.py` to regenerate 300 DPI publication figures.
-  * Author the final 4-page IEEE conference paper in `docs/RESEARCH_PAPER_MANUSCRIPT_BLUEPRINT.md` and defend individual Git commits during the oral viva.
+* Author the final 4-page IEEE conference paper in `docs/RESEARCH_PAPER_MANUSCRIPT_BLUEPRINT.md` after evidence collection and defend individual Git commits during the oral viva.
+
+## Evidence Status and Setup Notes
+
+The checked-in benchmark CSVs and generated figures are synthetic examples. No latency improvement, false-alarm reduction, psychometric result, 72 FPS result, cost parity, payback period, or participant sample size is established by those files. The ROI analysis now requires a provenance-marked empirical CSV and explicit cost inputs; without them it reports no study or economics result. See [`docs/EMPIRICAL_DATA_COLLECTION_PROTOCOL.md`](docs/EMPIRICAL_DATA_COLLECTION_PROTOCOL.md) and [`docs/UNITY_SCENE_SETUP.md`](docs/UNITY_SCENE_SETUP.md) for collection and Unity integration requirements. The repository folder currently lacks Unity project settings and a native scene, so headset build and release remain pending.
 
 ---
 
@@ -146,6 +150,9 @@ git checkout -b feat/n024-xr-systems-architect
 # Step 3: Run telemetry and evaluation unit tests
 python telemetry/test_evaluation_tools.py
 
-# Step 4: Verify 300 DPI publication figures and techno-managerial ROI model
-python telemetry/sensory_stress_defense_roi.py
+# Step 4: After an approved study, analyze a provenance-marked empirical CSV
+python telemetry/sensory_stress_defense_roi.py --input <empirical.csv>
+
+# Optional: create clearly labeled synthetic illustrations in telemetry/SIMULATED_figures/
+python telemetry/generate_paper_figures.py
 ```

@@ -14,7 +14,8 @@ def calculate_sus_score(responses):
     Even items (2,4,6,8,10): contribution = 5 - score
     Total SUS = sum of contributions * 2.5
     """
-    assert len(responses) == 10, "SUS requires exactly 10 responses"
+    if len(responses) != 10 or any(int(value) < 1 or int(value) > 5 for value in responses):
+        raise ValueError("SUS requires exactly 10 integer responses in the 1–5 range.")
     odd_sum = sum(responses[i] - 1 for i in range(0, 10, 2))
     even_sum = sum(5 - responses[i] for i in range(1, 10, 2))
     return (odd_sum + even_sum) * 2.5
@@ -26,26 +27,20 @@ def grade_sus(score):
     else: return "Grade F (Unacceptable - Critical Intervention Required)"
 
 def evaluate_cohort(csv_file=None):
-    # If no CSV provided, run calibrated trial baseline (N = 16 participants)
-    sample_data = [
-        [4, 2, 5, 1, 4, 2, 5, 2, 4, 1], # SUS: 85.0
-        [5, 1, 4, 2, 4, 1, 5, 1, 4, 2], # SUS: 87.5
-        [4, 2, 4, 2, 5, 2, 4, 2, 5, 1], # SUS: 82.5
-        [3, 3, 4, 2, 4, 2, 4, 3, 4, 2], # SUS: 70.0
-        [5, 2, 5, 1, 5, 1, 4, 1, 5, 2], # SUS: 90.0
-        [4, 2, 4, 3, 4, 2, 4, 2, 4, 2], # SUS: 72.5
-        [5, 1, 5, 1, 4, 2, 5, 1, 5, 1], # SUS: 92.5
-        [4, 3, 4, 2, 3, 3, 4, 2, 4, 2], # SUS: 67.5
-        [4, 2, 5, 2, 4, 1, 5, 2, 4, 1], # SUS: 85.0
-        [5, 2, 4, 1, 5, 2, 4, 1, 4, 2], # SUS: 82.5
-        [3, 2, 4, 3, 4, 2, 4, 2, 3, 2], # SUS: 70.0
-        [5, 1, 5, 2, 5, 1, 4, 2, 5, 1], # SUS: 87.5
-        [4, 2, 4, 2, 4, 2, 5, 2, 4, 2], # SUS: 77.5
-        [5, 2, 5, 1, 4, 2, 5, 1, 4, 1], # SUS: 85.0
-        [4, 1, 4, 2, 5, 2, 4, 1, 5, 2], # SUS: 82.5
-        [4, 2, 5, 2, 4, 2, 4, 2, 4, 1]  # SUS: 77.5
-    ]
-    scores = [calculate_sus_score(row) for row in sample_data]
+    if not csv_file:
+        print("No empirical SUS file supplied. No scores are reported.")
+        return None
+    with open(csv_file, newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames or "data_status" not in reader.fieldnames:
+            raise ValueError("SUS CSV must contain data_status=empirical for every response row.")
+        fields = [f"q{i}" for i in range(1, 11)]
+        if not set(fields).issubset(reader.fieldnames):
+            raise ValueError("SUS CSV requires q1 through q10 columns.")
+        rows = list(reader)
+    if not rows or any(row["data_status"].strip().lower() != "empirical" for row in rows):
+        raise ValueError("No empirical SUS rows found, or the file includes non-empirical rows.")
+    scores = [calculate_sus_score([int(row[field]) for field in fields]) for row in rows]
     mean_sus = sum(scores) / len(scores)
     variance = sum((s - mean_sus) ** 2 for s in scores) / (len(scores) - 1)
     std_dev = math.sqrt(variance)
